@@ -10,14 +10,10 @@ class PlatformControl : Platform {
     
     // MARK - Creation
     
-    func setup(name: String) {
+    func setup() {
         
         // Enable Control
         enableControl = true
-
-        let rangeArray = name.componentsSeparatedByString(",")
-        maxVertical = rangeArray[1].CGFloatValue
-        minVertical = rangeArray[2].CGFloatValue
     }
     
     // MARK - Game Logic

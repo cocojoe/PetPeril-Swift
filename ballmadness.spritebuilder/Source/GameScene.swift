@@ -40,10 +40,10 @@ class GameScene : CCNode {
         
         for childNode in levelNode.children {
             
-            if let match = childNode.name.rangeOfString("control", options: .RegularExpressionSearch) {
+            if childNode.name == "control" {
                 
                 var platformNode = childNode as! PlatformControl
-                platformNode.setup(childNode.name)
+                platformNode.setup()
                 
                 // Assign to Mechanic Group (Left / Right)
                 if(index % 2 == 0) {
