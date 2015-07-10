@@ -9,6 +9,8 @@
 import Foundation
 import CoreGraphics
 
+// MARK - Random
+
 extension Array {
     func randomItem() -> T {
         let index = Int(arc4random_uniform(UInt32(self.count)))
@@ -90,5 +92,17 @@ public extension CGFloat {
     */
     public static func random(#min: CGFloat, max: CGFloat) -> CGFloat {
         return CGFloat.random() * (max - min) + min
+    }
+}
+
+// MARK Conversion
+
+extension String {
+    var floatValue: Float {
+        return (self as NSString).floatValue
+    }
+    
+    var CGFloatValue: CGFloat {
+        return CGFloat((self as NSString).floatValue)
     }
 }

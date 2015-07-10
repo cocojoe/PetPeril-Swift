@@ -9,8 +9,11 @@ class GameScene : CCNode {
     var physicsWorld: CCPhysicsNode!
     
     // Mechanical Groups
-    var mechanicalGroupLeft: [Platform?] = []
-    var mechanicalGroupRight: [Platform?] = []
+    var mechanicalGroupLeft: [PlatformControl?] = []
+    var mechanicalGroupRight: [PlatformControl?] = []
+    
+    // Level Loading
+    var levelLoader: CCNode!
     
     func didLoadFromCCB() {
         
@@ -20,7 +23,7 @@ class GameScene : CCNode {
         
         // Physics Setup
         physicsWorld.debugDraw = false
-
+        
         // Create World
         initialiseWorld()
     }
@@ -28,54 +31,40 @@ class GameScene : CCNode {
     // MARK: - Content Creation
     
     func initialiseWorld() {
-        var generatedWidth: CGFloat = 0
-        var index: Int = 1
-        var lastPosition = ccp(0,0)
-
-        while generatedWidth < designSize.width {
+        
+        var index = 0
+        
+        // Load Level
+        let levelNode = CCBReader.load("Mountain Levels/Level1")
+        levelLoader.addChild(levelNode)
+        
+        for childNode in levelNode.children {
             
-            var newPlatform = generatePlatform()
-            let platformWidth = newPlatform.pillar.contentSize.width
-            generatedWidth += platformWidth
-            
-            // Platform Position
-            newPlatform.position = lastPosition
-            lastPosition = ccpAdd(lastPosition,ccp(platformWidth,0))
-            
-            // Platform Vertical Modification
-            // Pillar Half Point
-            newPlatform.position = ccp(newPlatform.position.x,-newPlatform.pillar.contentSize.height*0.5)
-            // Remove or Add Vertical (Randomise Initial Position)
-            newPlatform.position = ccpSub(newPlatform.position,ccp(0,newPlatform.offsetRandomiser.randomItem()))
-            // Create Constraints
-            newPlatform.addConstraints()
-            
-            // Add Child
-            physicsWorld.addChild(newPlatform, z: 1)
-            
-            // Assign to Mechanic
-            if(index % 2 == 0) {
-                // Even Number
-                mechanicalGroupLeft.append(newPlatform)
-            } else {
-                // Odd Number
-                mechanicalGroupRight.append(newPlatform)
-                newPlatform.pillar.color = CCColor(red: 0.8, green: 0.8, blue: 0.8)
+            if let match = childNode.name.rangeOfString("control", options: .RegularExpressionSearch) {
+                
+                var platformNode = childNode as! PlatformControl
+                platformNode.setup(childNode.name)
+                
+                // Assign to Mechanic Group (Left / Right)
+                if(index % 2 == 0) {
+                    // Even Number
+                    mechanicalGroupLeft.append(platformNode)
+                } else {
+                    // Odd Number
+                    mechanicalGroupRight.append(platformNode)
+                }
+                index++
             }
-            index++
         }
     }
     
-    func generatePlatform() -> Platform {
-        var platform:Platform = CCBReader.load("Platform") as! Platform
-        platform.randomize()
-        
-        return platform;
-    }
     
+
+
+
     // MARK: - Touch Handlers
     override func touchBegan(touch: CCTouch!, withEvent event: CCTouchEvent!) {
-        // Multi Touch
+        // Nothing To Do
     }
     
     override func touchMoved(touch: CCTouch!, withEvent event: CCTouchEvent!) {
@@ -86,14 +75,18 @@ class GameScene : CCNode {
         if newLocation.x < (designSize.width*0.5) {
             // Left Move
             for platform in mechanicalGroupLeft {
-                platform?.position = ccpAdd(platform!.position,ccp(0,touchDiff.y))
-                platform?.checkConstraints()
+                if platform?.enableControl == true {
+                    platform?.position = ccpAdd(platform!.position,ccp(0,touchDiff.y))
+                    platform?.checkConstraints()
+                }
             }
         } else if newLocation.x > (designSize.width*0.5) {
             // Right Move
             for platform in mechanicalGroupRight {
-                platform?.position = ccpAdd(platform!.position,ccp(0,touchDiff.y))
-                platform?.checkConstraints()
+                if platform?.enableControl == true {
+                    platform?.position = ccpAdd(platform!.position,ccp(0,touchDiff.y))
+                    platform?.checkConstraints()
+                }
             }
         }
     }
