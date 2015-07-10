@@ -20,8 +20,7 @@ class GameScene : CCNode {
         
         // Physics Setup
         physicsWorld.debugDraw = false
-        //physicsWorld.positionType = CCPositionType(xUnit: .Normalized, yUnit: .Normalized, corner: .BottomLeft)
-        
+
         // Create World
         initialiseWorld()
     }
@@ -43,7 +42,12 @@ class GameScene : CCNode {
             newPlatform.position = lastPosition
             lastPosition = ccpAdd(lastPosition,ccp(platformWidth,0))
             
-            // Platform Constraints
+            // Platform Vertical Modification
+            // Pillar Half Point
+            newPlatform.position = ccp(newPlatform.position.x,-newPlatform.pillar.contentSize.height*0.5)
+            // Remove or Add Vertical (Randomise Initial Position)
+            newPlatform.position = ccpSub(newPlatform.position,ccp(0,newPlatform.offsetRandomiser.randomItem()))
+            // Create Constraints
             newPlatform.addConstraints()
             
             // Add Child
@@ -53,11 +57,10 @@ class GameScene : CCNode {
             if(index % 2 == 0) {
                 // Even Number
                 mechanicalGroupLeft.append(newPlatform)
-                newPlatform.pillar.color = CCColor(red: 0.8, green: 0.8, blue: 0.8)
             } else {
                 // Odd Number
                 mechanicalGroupRight.append(newPlatform)
-                newPlatform.pillar.color = CCColor(red: 0.4, green: 0.4, blue: 0.4)
+                newPlatform.pillar.color = CCColor(red: 0.8, green: 0.8, blue: 0.8)
             }
             index++
         }
@@ -65,13 +68,7 @@ class GameScene : CCNode {
     
     func generatePlatform() -> Platform {
         var platform:Platform = CCBReader.load("Platform") as! Platform
-        
-        // Modify Pillar Width Dynamically
-        platform.pillar.contentSize.width *= platform.scaleRandomiser.randomItem()
-        
-        // Create Physics Body
-        platform.pillar.physicsBody = CCPhysicsBody(rect: platform.pillar.boundingBox(), cornerRadius: 0)
-        platform.pillar.physicsBody.type = .Static
+        platform.randomize()
         
         return platform;
     }
