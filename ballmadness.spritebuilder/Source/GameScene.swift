@@ -8,12 +8,15 @@ class GameScene : CCNode {
     // Core Nodes
     var physicsWorld: CCPhysicsNode!
     
-    // Mechanical Groups
-    var mechanicalGroupLeft: [PlatformControl?] = []
-    var mechanicalGroupRight: [PlatformControl?] = []
+    // Groups
+    var mechanical: [PlatformControl?] = []
+    var characters: [Character?] = []
     
     // Level Loading
     var levelLoader: CCNode!
+    
+    // Important Points
+    var startPoint: CGPoint = CGPointZero
     
     func didLoadFromCCB() {
         
@@ -23,45 +26,63 @@ class GameScene : CCNode {
         
         // Physics Setup
         physicsWorld.debugDraw = false
+        physicsWorld.space.damping = 0.80
         
         // Create World
         initialiseWorld()
+        
+        // Spawn Characters
+        spawnCharacter()
     }
     
     // MARK: - Content Creation
     
     func initialiseWorld() {
         
-        var index = 0
-        
         // Load Level
         let levelNode = CCBReader.load("Mountain Levels/Level1")
         levelLoader.addChild(levelNode)
         
-        for childNode in levelNode.children {
+        for childNode in levelNode.children as! [CCNode] {
             
+            // Enable Control for Tagged Platforms
             if childNode.name == "control" {
                 
                 var platformNode = childNode as! PlatformControl
                 platformNode.setup()
                 
-                // Assign to Mechanic Group (Left / Right)
-                if(index % 2 == 0) {
-                    // Even Number
-                    mechanicalGroupLeft.append(platformNode)
-                } else {
-                    // Odd Number
-                    mechanicalGroupRight.append(platformNode)
-                }
-                index++
+                mechanical.append(platformNode)
+            }
+            
+            // Enable Control for Tagged Platforms
+            if childNode.name == "startPoint" {
+                startPoint = childNode.position
             }
         }
     }
     
+    func spawnCharacter() {
+        let characterNode = CCBReader.load("Character Objects/TheCat") as! Character
+        characterNode.position = startPoint
+        physicsWorld.addChild(characterNode)
+        
+        characters.append(characterNode)
+    }
     
-
-
-
+    // MARK: - Game Loop
+    
+    override func update(delta: CCTime) {
+        for character in characters {
+            
+            character!.body.physicsBody.applyImpulse(character!.acceleration)
+            
+            if character!.body.physicsBody.velocity.x > character!.maxVelocity.x {
+                character!.body.physicsBody.velocity.x = character!.maxVelocity.x
+            }
+            
+        }
+    }
+    
     // MARK: - Touch Handlers
     override func touchBegan(touch: CCTouch!, withEvent event: CCTouchEvent!) {
         // Nothing To Do
@@ -72,23 +93,33 @@ class GameScene : CCNode {
         let lastLocation: CGPoint = touch.previousLocationInView(CCDirector.sharedDirector().view as! CCGLView)
         let touchDiff: CGPoint = ccpSub(lastLocation, newLocation)
         
-        if newLocation.x < (designSize.width*0.5) {
-            // Left Move
-            for platform in mechanicalGroupLeft {
-                if platform?.enableControl == true {
-                    platform?.position = ccpAdd(platform!.position,ccp(0,touchDiff.y))
-                    platform?.checkConstraints()
-                }
-            }
-        } else if newLocation.x > (designSize.width*0.5) {
-            // Right Move
-            for platform in mechanicalGroupRight {
-                if platform?.enableControl == true {
-                    platform?.position = ccpAdd(platform!.position,ccp(0,touchDiff.y))
-                    platform?.checkConstraints()
-                }
+        for platform in mechanical {
+            if platform!.enableControl == true {
+                // Dynamic Body Must Be Moved Directly (Not affected by Parent)
+                platform?.position = ccpAdd(platform!.position,ccp(0,touchDiff.y*platform!.direction))
+                platform!.validateConstraints()
             }
         }
+    }
+    
+    // MARK: - UX
+    
+    func restart() {
+        cleanScene()
+        
+        var gameScene: CCScene = CCBReader.loadAsScene("GameScene")
+        CCDirector.sharedDirector().replaceScene(gameScene);
+    }
+    
+    // MARK: - Housekeeping
+    
+    func cleanScene() {
+        
+        // Clear Characters
+        characters.removeAll(keepCapacity: false)
+        
+        // Clear Control Platforms
+        mechanical.removeAll(keepCapacity: false)
     }
     
 }

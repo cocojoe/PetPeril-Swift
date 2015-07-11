@@ -57,9 +57,9 @@
 				<key>physicsBody</key>
 				<dict>
 					<key>affectedByGravity</key>
-					<true/>
+					<false/>
 					<key>allowsRotation</key>
-					<true/>
+					<false/>
 					<key>bodyShape</key>
 					<integer>0</integer>
 					<key>collisionCategories</key>
@@ -71,7 +71,7 @@
 					<key>cornerRadius</key>
 					<real>0.0</real>
 					<key>density</key>
-					<real>1</real>
+					<real>10</real>
 					<key>dynamic</key>
 					<true/>
 					<key>elasticity</key>
@@ -85,12 +85,12 @@
 							<real>16.410171508789062</real>
 						</array>
 						<array>
-							<real>1.2029711008071899</real>
-							<real>27.94257926940918</real>
+							<real>0.3321698009967804</real>
+							<real>26.745298385620117</real>
 						</array>
 						<array>
-							<real>56.834560394287109</real>
-							<real>27.686443328857422</real>
+							<real>57.851715087890625</real>
+							<real>26.461166381835938</real>
 						</array>
 						<array>
 							<real>56.345611572265625</real>
@@ -105,12 +105,12 @@
 								<real>16.417341232299805</real>
 							</array>
 							<array>
-								<real>56.834560394287109</real>
-								<real>27.686443328857422</real>
+								<real>57.851715087890625</real>
+								<real>26.461166381835938</real>
 							</array>
 							<array>
-								<real>1.2029711008071899</real>
-								<real>27.94257926940918</real>
+								<real>0.3321698009967804</real>
+								<real>26.745298385620117</real>
 							</array>
 							<array>
 								<real>2.46875</real>
@@ -211,6 +211,8 @@
 						<array/>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 		</array>
 		<key>customClass</key>
@@ -283,8 +285,6 @@
 				</array>
 			</dict>
 		</array>
-		<key>selected</key>
-		<true/>
 	</dict>
 	<key>notes</key>
 	<array/>

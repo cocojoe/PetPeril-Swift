@@ -5,20 +5,21 @@ class PlatformControl : Platform {
     // Range
     var minVertical: CGFloat = 0
     var maxVertical: CGFloat = 0
+    var direction  : CGFloat = 0
     
+    // Touch Enabled
     var enableControl = false
     
     // MARK - Creation
     
     func setup() {
-        
         // Enable Control
         enableControl = true
     }
     
     // MARK - Game Logic
     
-    func checkConstraints() {
+    func validateConstraints() {
         
         // Check Vertical Constraints
         if position.y < minVertical {
