@@ -9,7 +9,7 @@
 import Foundation
 import CoreGraphics
 
-// MARK - Random
+// MARK: - Random Selection/Generators
 
 extension Array {
     func randomItem() -> T {
@@ -95,7 +95,7 @@ public extension CGFloat {
     }
 }
 
-// MARK Conversion
+// MARK:- Type Conversions
 
 extension String {
     var floatValue: Float {

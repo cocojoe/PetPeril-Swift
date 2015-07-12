@@ -1,6 +1,6 @@
 import Foundation
 
-class GameScene : CCNode {
+class GameScene : CCNode,CCPhysicsCollisionDelegate {
     
     // Helper Information
     let designSize = CCDirector.sharedDirector().designSize
@@ -25,7 +25,8 @@ class GameScene : CCNode {
         self.multipleTouchEnabled = true
         
         // Physics Setup
-        physicsWorld.debugDraw = false
+        physicsWorld.collisionDelegate = self
+        physicsWorld.debugDraw = true
         physicsWorld.space.damping = 0.80
         
         // Create World
@@ -33,6 +34,7 @@ class GameScene : CCNode {
         
         // Spawn Characters
         spawnCharacter()
+        self.schedule("spawnCharacter", interval: 2.0)
     }
     
     // MARK: - Content Creation
@@ -54,9 +56,10 @@ class GameScene : CCNode {
                 mechanical.append(platformNode)
             }
             
-            // Enable Control for Tagged Platforms
+            // Grab Start Point
             if childNode.name == "startPoint" {
                 startPoint = childNode.position
+                childNode.visible = false
             }
         }
     }
@@ -65,6 +68,7 @@ class GameScene : CCNode {
         let characterNode = CCBReader.load("Character Objects/TheCat") as! Character
         characterNode.position = startPoint
         physicsWorld.addChild(characterNode)
+         println(characterNode.equateStamp)
         
         characters.append(characterNode)
     }
@@ -72,14 +76,10 @@ class GameScene : CCNode {
     // MARK: - Game Loop
     
     override func update(delta: CCTime) {
+        
+        // Update Game Characters
         for character in characters {
-            
-            character!.body.physicsBody.applyImpulse(character!.acceleration)
-            
-            if character!.body.physicsBody.velocity.x > character!.maxVelocity.x {
-                character!.body.physicsBody.velocity.x = character!.maxVelocity.x
-            }
-            
+            character?.update(delta)
         }
     }
     
@@ -94,12 +94,45 @@ class GameScene : CCNode {
         let touchDiff: CGPoint = ccpSub(lastLocation, newLocation)
         
         for platform in mechanical {
-            if platform!.enableControl == true {
-                // Dynamic Body Must Be Moved Directly (Not affected by Parent)
-                platform?.position = ccpAdd(platform!.position,ccp(0,touchDiff.y*platform!.direction))
-                platform!.validateConstraints()
+            platform?.processMove(touchDiff)
+        }
+    }
+    
+    // MARK: - Physics
+    func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, characterExtraLife: Sensor!, character: Character!) -> Bool {
+        println("SecondChance v Character")
+        return true
+    }
+    
+    func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, platform: PlatformControl!, character: Character!) -> Bool {
+        println("Platform v Character")
+        return true
+    }
+    
+    func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, characterGoal: Goal!, character: Character!) -> Bool {
+        println("Goal v Character")
+        return true
+    }
+    
+    func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, character characterBody: CCNode!, death: Death!) -> Bool {
+        println("Death")
+        
+        var character: Character = characterBody.parent as! Character
+
+        for (index,arrayCharacter) in enumerate(characters) {
+            if character==arrayCharacter {
+                characters.removeAtIndex(index)
             }
         }
+        
+        // Remove Character
+        physicsWorld.space.addPostStepBlock({
+            character.removeFromParent()
+        }, key:character)
+        
+        // Add Effects
+        
+        return false
     }
     
     // MARK: - UX

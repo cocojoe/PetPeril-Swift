@@ -7,6 +7,9 @@ class PlatformControl : Platform {
     var maxVertical: CGFloat = 0
     var direction  : CGFloat = 0
     
+    //
+    let verticalClamp: CGPoint = ccp(12.0,12.0)
+    
     // Touch Enabled
     var enableControl = false
     
@@ -19,7 +22,15 @@ class PlatformControl : Platform {
     
     // MARK - Game Logic
     
-    func validateConstraints() {
+    func processMove(positionChange: CGPoint) {
+        
+        // Ensure Controlled
+        if enableControl == false {
+            return
+        }
+        
+        let positionDiff = ccpClamp(positionChange, ccpMult(verticalClamp,-1), verticalClamp)
+        position = ccpAdd(position,ccp(0,positionDiff.y*direction))
         
         // Check Vertical Constraints
         if position.y < minVertical {
@@ -27,6 +38,7 @@ class PlatformControl : Platform {
         } else if position.y > maxVertical {
             position.y = maxVertical
         }
+
     }
     
     

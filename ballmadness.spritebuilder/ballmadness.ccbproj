@@ -78,66 +78,43 @@
 			<key>previewFolderHidden</key>
 			<true/>
 		</dict>
-		<key>Character Assets</key>
-		<dict>
-			<key>isDirty</key>
-			<true/>
-			<key>isSmartSpriteSheet</key>
-			<true/>
-		</dict>
 		<key>Character Assets/Cat_10.png</key>
 		<dict>
-			<key>isDirty</key>
-			<true/>
 			<key>scaleFrom</key>
 			<integer>1</integer>
 		</dict>
 		<key>Character Assets/Cat_3.png</key>
 		<dict>
-			<key>isDirty</key>
-			<true/>
 			<key>scaleFrom</key>
 			<integer>1</integer>
 		</dict>
 		<key>Character Assets/Cat_4.png</key>
 		<dict>
-			<key>isDirty</key>
-			<true/>
 			<key>scaleFrom</key>
 			<integer>1</integer>
 		</dict>
 		<key>Character Assets/Cat_5.png</key>
 		<dict>
-			<key>isDirty</key>
-			<true/>
 			<key>scaleFrom</key>
 			<integer>1</integer>
 		</dict>
 		<key>Character Assets/Cat_6.png</key>
 		<dict>
-			<key>isDirty</key>
-			<true/>
 			<key>scaleFrom</key>
 			<integer>1</integer>
 		</dict>
 		<key>Character Assets/Cat_7.png</key>
 		<dict>
-			<key>isDirty</key>
-			<true/>
 			<key>scaleFrom</key>
 			<integer>1</integer>
 		</dict>
 		<key>Character Assets/Cat_8.png</key>
 		<dict>
-			<key>isDirty</key>
-			<true/>
 			<key>scaleFrom</key>
 			<integer>1</integer>
 		</dict>
 		<key>Character Assets/Cat_9.png</key>
 		<dict>
-			<key>isDirty</key>
-			<true/>
 			<key>scaleFrom</key>
 			<integer>1</integer>
 		</dict>

@@ -43,23 +43,23 @@
 				<key>UUID</key>
 				<integer>1</integer>
 				<key>baseClass</key>
-				<string>CCNodeColor</string>
+				<string>CCNodeGradient</string>
 				<key>children</key>
 				<array/>
 				<key>customClass</key>
 				<string></string>
 				<key>displayName</key>
-				<string>CCNodeColor</string>
+				<string>CCNodeGradient</string>
 				<key>memberVarAssignmentName</key>
-				<string></string>
+				<string>sensor</string>
 				<key>memberVarAssignmentType</key>
 				<integer>1</integer>
 				<key>physicsBody</key>
 				<dict>
 					<key>affectedByGravity</key>
-					<true/>
+					<false/>
 					<key>allowsRotation</key>
-					<true/>
+					<false/>
 					<key>bodyShape</key>
 					<integer>0</integer>
 					<key>collisionCategories</key>
@@ -67,7 +67,7 @@
 					<key>collisionMask</key>
 					<array/>
 					<key>collisionType</key>
-					<string></string>
+					<string>characterExtraLife</string>
 					<key>cornerRadius</key>
 					<real>0.0</real>
 					<key>density</key>
@@ -81,40 +81,40 @@
 					<key>points</key>
 					<array>
 						<array>
-							<real>4.2551860809326172</real>
-							<real>-2.1913495063781738</real>
+							<real>0.0</real>
+							<real>0.0</real>
 						</array>
 						<array>
-							<real>-5.3571019172668457</real>
-							<real>2.118138313293457</real>
+							<real>0.0</real>
+							<real>10</real>
 						</array>
 						<array>
-							<real>21.570138931274414</real>
-							<real>2.5467770099639893</real>
+							<real>568</real>
+							<real>10</real>
 						</array>
 						<array>
-							<real>13.6390380859375</real>
-							<real>-2.4736862182617188</real>
+							<real>568</real>
+							<real>0.0</real>
 						</array>
 					</array>
 					<key>polygons</key>
 					<array>
 						<array>
 							<array>
-								<real>13.6390380859375</real>
-								<real>-2.4736862182617188</real>
+								<real>568</real>
+								<real>0.0</real>
 							</array>
 							<array>
-								<real>21.570138931274414</real>
-								<real>2.5467770099639893</real>
+								<real>568</real>
+								<real>10</real>
 							</array>
 							<array>
-								<real>-5.3571019172668457</real>
-								<real>2.118138313293457</real>
+								<real>0.0</real>
+								<real>10</real>
 							</array>
 							<array>
-								<real>4.2551860809326172</real>
-								<real>-2.1913495063781738</real>
+								<real>0.0</real>
+								<real>0.0</real>
 							</array>
 						</array>
 					</array>
@@ -150,8 +150,8 @@
 						<string>Size</string>
 						<key>value</key>
 						<array>
-							<real>16</real>
-							<real>14</real>
+							<real>568</real>
+							<real>10</real>
 							<integer>0</integer>
 							<integer>0</integer>
 						</array>
@@ -182,24 +182,40 @@
 					</dict>
 					<dict>
 						<key>name</key>
-						<string>color</string>
+						<string>startColor</string>
 						<key>type</key>
 						<string>Color3</string>
 						<key>value</key>
 						<array>
-							<real>0.049095012247562408</real>
+							<real>0.20999999344348907</real>
+							<real>0.64999997615814209</real>
 							<real>0.87000000476837158</real>
-							<real>0.017908822745084763</real>
 							<real>1</real>
 						</array>
 					</dict>
 					<dict>
 						<key>name</key>
-						<string>opacity</string>
+						<string>endColor</string>
 						<key>type</key>
-						<string>Float</string>
+						<string>Color3</string>
 						<key>value</key>
-						<real>1</real>
+						<array>
+							<real>0.12999999523162842</real>
+							<real>0.5</real>
+							<real>0.80000001192092896</real>
+							<real>1</real>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>vector</string>
+						<key>type</key>
+						<string>Point</string>
+						<key>value</key>
+						<array>
+							<real>0.0</real>
+							<real>-1</real>
+						</array>
 					</dict>
 				</array>
 				<key>selected</key>
@@ -207,7 +223,7 @@
 			</dict>
 		</array>
 		<key>customClass</key>
-		<string></string>
+		<string>Sensor</string>
 		<key>displayName</key>
 		<string>CCNode</string>
 		<key>memberVarAssignmentName</key>
@@ -258,8 +274,8 @@
 				<string>Point</string>
 				<key>value</key>
 				<array>
-					<real>0.0</real>
-					<real>0.0</real>
+					<real>0.5</real>
+					<real>0.5</real>
 				</array>
 			</dict>
 			<dict>

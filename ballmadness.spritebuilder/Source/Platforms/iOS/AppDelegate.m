@@ -54,6 +54,9 @@
     
     [self setupCocos2dWithOptions:cocos2dSetup];
     
+    // Increase Physics Samping
+    [[CCDirector sharedDirector] setFixedUpdateInterval:1.0/180.0];
+    
     return YES;
 }
 
