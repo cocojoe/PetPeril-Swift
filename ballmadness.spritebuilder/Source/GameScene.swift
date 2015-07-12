@@ -99,8 +99,10 @@ class GameScene : CCNode,CCPhysicsCollisionDelegate {
     }
     
     // MARK: - Physics
-    func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, characterExtraLife: Sensor!, character: Character!) -> Bool {
+    func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, characterExtraLife: Sensor!, character characterBody: CCNode!) -> Bool {
         println("SecondChance v Character")
+        
+        
         return true
     }
     
@@ -109,28 +111,21 @@ class GameScene : CCNode,CCPhysicsCollisionDelegate {
         return true
     }
     
-    func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, characterGoal: Goal!, character: Character!) -> Bool {
-        println("Goal v Character")
+    func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, character characterBody: CCNode!, characterGoal: Goal!) -> Bool {
+        
+        // Destroy Character
+        removeCharacter(characterBody)
+        
         return true
     }
     
     func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, character characterBody: CCNode!, death: Death!) -> Bool {
-        println("Death")
         
-        var character: Character = characterBody.parent as! Character
-
-        for (index,arrayCharacter) in enumerate(characters) {
-            if character==arrayCharacter {
-                characters.removeAtIndex(index)
-            }
-        }
-        
-        // Remove Character
-        physicsWorld.space.addPostStepBlock({
-            character.removeFromParent()
-        }, key:character)
+        // Destroy Character
+        removeCharacter(characterBody)
         
         // Add Effects
+        shake()
         
         return false
     }
@@ -144,7 +139,29 @@ class GameScene : CCNode,CCPhysicsCollisionDelegate {
         CCDirector.sharedDirector().replaceScene(gameScene);
     }
     
+    // MARK: - Effects
+    func shake() {
+        self.runAction(CCActionShake(duration: 0.25, amplitude: ccp(CGFloat.random(min:CGFloat(1),max:CGFloat(5)) , CGFloat.random(min:CGFloat(1),max: CGFloat(5))), dampening:true, shakes:0))
+    }
+    
     // MARK: - Housekeeping
+    
+    func removeCharacter(characterBody: CCNode) {
+        
+        var character: Character = characterBody.parent as! Character
+        
+        for (index,arrayCharacter) in enumerate(characters) {
+            if character==arrayCharacter {
+                characters.removeAtIndex(index)
+            }
+        }
+        
+        // Remove Character
+        physicsWorld.space.addPostStepBlock({
+            character.removeFromParent()
+            }, key:character)
+        
+    }
     
     func cleanScene() {
         
