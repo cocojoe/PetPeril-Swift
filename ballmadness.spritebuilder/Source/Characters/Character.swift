@@ -9,8 +9,6 @@ class Character : CCNode {
     var active = false
     
     func didLoadFromCCB() {
-        body.physicsBody.collisionGroup = "character"
-        body.physicsBody.sensor = true
     }
     
     override func update(delta: CCTime) {
@@ -35,16 +33,7 @@ class Character : CCNode {
         
         // Ignore Collisions
         body.physicsBody.type = .Static
-        //body.physicsBody.sensor = true
-    }
-    
-    func enablePhysics() {
-        
-        // Restore Collisions
-        body.physicsBody.type = .Dynamic
-        //body.physicsBody.sensor = false
-        body.physicsBody.allowsRotation = false
-        body.physicsBody.collisionGroup = "character"
+        body.physicsBody.sensor = true
     }
     
 }

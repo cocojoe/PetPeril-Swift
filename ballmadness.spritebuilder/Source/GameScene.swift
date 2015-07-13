@@ -28,7 +28,7 @@ class GameScene : CCNode,CCPhysicsCollisionDelegate {
         physicsWorld.collisionDelegate = self
         physicsWorld.debugDraw = false
         physicsWorld.space.damping = 0.80
-        
+  
         // Create World
         initialiseWorld()
         
@@ -93,17 +93,17 @@ class GameScene : CCNode,CCPhysicsCollisionDelegate {
     }
     
     // MARK: - Physics
-    func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, characterExtraLife: Sensor!, character characterBody: CCNode!) -> Bool {
-        println("SecondChance v Character")
+    func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, characterSoftDeath: Sensor!, character characterBody: CCNode!) -> Bool {
         
         var character: Character = characterBody.parent as! Character
-        moveCharacter(character,targetPosition: startPoint)
+        killCharacter(character)
         
         return false
     }
     
     func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, platform: PlatformControl!, character characterBody: CCNode!) -> Bool {
         println("Character/Platform Begin")
+        
         var character: Character = characterBody.parent as! Character
         character.active = true
         
@@ -112,6 +112,7 @@ class GameScene : CCNode,CCPhysicsCollisionDelegate {
     
     func ccPhysicsCollisionSeparate(pair: CCPhysicsCollisionPair!, platform: PlatformControl!, character characterBody: CCNode!) -> Bool {
         println("Character/Platform End")
+        
         var character: Character = characterBody.parent as! Character
         character.active = false
         return true
@@ -120,7 +121,8 @@ class GameScene : CCNode,CCPhysicsCollisionDelegate {
     func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, character characterBody: CCNode!, characterGoal: Goal!) -> Bool {
         
         // Destroy Character
-        removeCharacter(characterBody)
+        var character: Character = characterBody.parent as! Character
+        removeCharacter(character)
         
         // Counter
         
@@ -130,7 +132,7 @@ class GameScene : CCNode,CCPhysicsCollisionDelegate {
     func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, character characterBody: CCNode!, death: Death!) -> Bool {
         
         // Destroy Character
-        removeCharacter(characterBody)
+        var character: Character = characterBody.parent as! Character
         
         // Add Effects
         shake()
@@ -155,38 +157,19 @@ class GameScene : CCNode,CCPhysicsCollisionDelegate {
     
     // MARK: - Game Keeping
     
-    func moveCharacter(character: Character, targetPosition: CGPoint) {
     
         // Disable Physics
         character.disablePhysics()
         
         // Action
-        let actionMove = CCActionMoveTo(duration: 2.0, position: targetPosition)
-        let actionBlock = CCActionCallBlock(block: {
-            character.enablePhysics()
         })
-        let actionSequence = CCActionSequence(array: [actionMove,actionBlock])
-        
-        character.body.runAction(actionSequence)
-        
-        //
-        
-    }
     
-    func removeCharacter(characterBody: CCNode) {
-        
-        var character: Character = characterBody.parent as! Character
-        
         for (index,arrayCharacter) in enumerate(characters) {
             if character==arrayCharacter {
                 characters.removeAtIndex(index)
             }
         }
         
-        // Remove Character
-        physicsWorld.space.addPostStepBlock({
-            character.removeFromParent()
-            }, key:character)
     }
     
     // MARK: - House keeping

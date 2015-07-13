@@ -757,7 +757,7 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>568</real>
+							<real>164.855712890625</real>
 							<real>0.0</real>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -786,6 +786,8 @@
 						<string>Character Objects/DeathRotor.ccb</string>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -910,8 +912,6 @@
 						<string>Generic Objects/WallVertical.ccb</string>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
