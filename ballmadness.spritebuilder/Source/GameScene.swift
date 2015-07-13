@@ -129,13 +129,33 @@ class GameScene : CCNode,CCPhysicsCollisionDelegate {
         return true
     }
     
-    func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, character characterBody: CCNode!, death: Death!) -> Bool {
+    func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, character characterBody: CCNode!, death deathBody: CCNode!) -> Bool {
         
         // Destroy Character
         var character: Character = characterBody.parent as! Character
+        var death: Death = deathBody.parent as! Death
         
         // Add Effects
         shake()
+        
+        // Blood Effect Decal
+        let decal: CCSprite = CCSprite(imageNamed:"Character Assets/decal_blood.png")
+        decal.position = ccpAdd(death.position,ccp(0,death.body.contentSize.height*0.5))
+        decal.rotation = Float.random(min: 0, max: 360)
+        self.addChild(decal, z: 10)
+        
+        // Action Sequence
+        let actionFade  = CCActionFadeTo(duration: 0.5, opacity: 0)
+        let actionBlock  = CCActionCallBlock(block:{
+            decal.removeFromParent()
+        })
+        
+        decal.runAction(CCActionSequence(array: [actionFade,actionBlock]))
+        
+        // Remove Character
+        physicsWorld.space.addPostStepBlock({
+            self.removeCharacter(character)
+        }, key:character)
         
         return false
     }
@@ -157,19 +177,35 @@ class GameScene : CCNode,CCPhysicsCollisionDelegate {
     
     // MARK: - Game Keeping
     
+    func killCharacter(character: Character) {
     
         // Disable Physics
         character.disablePhysics()
         
         // Action
+        let actionMove  = CCActionMoveBy(duration: 1.5, position: ccp(0,200))
+        let actionFade  = CCActionFadeTo(duration: 0.5, opacity: 0)
+        let actionDelay = CCActionDelay(duration: 1.0)
+        let actionFunc  = CCActionCallBlock(block:{
+            self.removeCharacter(character)
         })
     
+        character.body.animationManager.runAnimationsForSequenceNamed("Death")
+    
+        character.body.runAction(actionMove)
+        character.body.runAction(CCActionSequence(array: [actionDelay,actionFade,actionFunc]))
+    }
+
+    func removeCharacter(character: Character) {
+
         for (index,arrayCharacter) in enumerate(characters) {
             if character==arrayCharacter {
                 characters.removeAtIndex(index)
             }
         }
         
+        // Remove From Scene
+        character.removeFromParent()
     }
     
     // MARK: - House keeping
