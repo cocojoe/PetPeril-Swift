@@ -25,7 +25,7 @@ class PlatformControl : Platform {
         
         // Tweak Physics
         pillar.physicsBody.type = .Dynamic
-        pillar.physicsBody.mass = 25
+        pillar.physicsBody.mass = 50
         
         // Store Position
         initialPosition = pillar.position
@@ -40,13 +40,7 @@ class PlatformControl : Platform {
         
         // Clamp Horizontal Velocity
         pillar.physicsBody.velocity.x = 0
-        
-        /*
-        println("Pos: \(pillar.position)")
-        println("Min: \(minVertical)")
-        println("Max: \(maxVertical)")
-        */
-
+    
         // Check Vertical Constraints
         if pillar.position.y <= minVertical {
             deadStop()
@@ -72,7 +66,7 @@ class PlatformControl : Platform {
         if lastDirection != currentDirection { deadStop() }
         
         // Apply Impulse
-        pillar.physicsBody.applyImpulse(ccpMult(ccp(0,positionDiff.y*direction),150))
+        pillar.physicsBody.applyImpulse(ccpMult(ccp(0,positionDiff.y*direction),175))
         
         // Set Last Direction
         lastDirection = currentDirection

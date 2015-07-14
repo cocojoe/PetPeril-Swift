@@ -28,14 +28,14 @@ class GameScene : CCNode,CCPhysicsCollisionDelegate {
         // Physics Setup
         physicsWorld.collisionDelegate = self
         physicsWorld.debugDraw = false
-        physicsWorld.space.damping = 0.50
+        //physicsWorld.space.damping = 0.90
   
         // Create World
         initialiseWorld()
         
         // Spawn Characters
         spawnCharacter()
-        self.schedule("spawnCharacter", interval: 1.0)
+        self.schedule("spawnCharacter", interval: 2.0)
     }
     
     // MARK: - Content Creation
@@ -72,7 +72,19 @@ class GameScene : CCNode,CCPhysicsCollisionDelegate {
             return
         }
         
-        let characterNode = CCBReader.load("Character Objects/TheCat") as! Character
+        // Random Character
+        var characterName: String?
+        
+        switch Int.random(min: 1, max: 2) {
+        case 1:
+            characterName = "Character Objects/TheCat"
+        case 2:
+            characterName = "Character Objects/ThePanda"
+        default:
+            println("No Valid Character")
+        }
+        
+        let characterNode = CCBReader.load(characterName) as! Character
         characterNode.position = startPoint
         physicsWorld.addChild(characterNode)
         
@@ -140,6 +152,32 @@ class GameScene : CCNode,CCPhysicsCollisionDelegate {
         
         var character: Character = characterBody.parent as! Character
         var platform: PlatformControl = platformBody.parent as! PlatformControl
+        
+        return true
+    }
+    
+    func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, character characterBody1: CCNode!, character characterBody2: CCNode!) -> Bool {
+        
+        // Destroy Character
+        var character1: Character = characterBody1.parent as! Character
+        var character2: Character = characterBody2.parent as! Character
+        
+        // The Bigger Consumes
+        if character1.body.scale >= character2.body.scale {
+            character1.body.scale += 0.25
+            
+            // Remove Character
+            physicsWorld.space.addPostStepBlock({
+                self.removeCharacter(character2)
+                }, key:character2)
+        } else {
+            character2.body.scale += 0.25
+            
+            // Remove Character
+            physicsWorld.space.addPostStepBlock({
+                self.removeCharacter(character1)
+                }, key:character1)
+        }
         
         return true
     }

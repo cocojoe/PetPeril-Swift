@@ -10,7 +10,7 @@
 		<false/>
 	</dict>
 	<key>UUID</key>
-	<integer>17</integer>
+	<integer>20</integer>
 	<key>centeredOrigin</key>
 	<false/>
 	<key>currentResolution</key>
@@ -41,7 +41,7 @@
 		<array>
 			<dict>
 				<key>UUID</key>
-				<integer>5</integer>
+				<integer>19</integer>
 				<key>baseClass</key>
 				<string>CCSprite</string>
 				<key>children</key>
@@ -71,8 +71,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>293</real>
-							<real>169</real>
+							<real>284</real>
+							<real>160</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -131,9 +131,9 @@
 						<string>Color3</string>
 						<key>value</key>
 						<array>
-							<real>0.70290899276733398</real>
-							<real>0.67237007617950439</real>
-							<real>0.67405307292938232</real>
+							<real>1</real>
+							<real>1</real>
+							<real>1</real>
 							<real>1</real>
 						</array>
 					</dict>
@@ -231,6 +231,8 @@
 								</array>
 							</dict>
 						</array>
+						<key>selected</key>
+						<true/>
 					</dict>
 				</array>
 				<key>customClass</key>
@@ -440,7 +442,7 @@
 						<string>String</string>
 						<key>value</key>
 						<array>
-							<string>Restart</string>
+							<string>R</string>
 							<false/>
 						</array>
 					</dict>

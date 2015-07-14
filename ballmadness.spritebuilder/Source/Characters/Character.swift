@@ -3,12 +3,12 @@ import Foundation
 class Character : CCNode {
     
     var body: CCSprite!
-    var acceleration: CGPoint = ccp(2.0,0.0)
+    var acceleration: CGPoint = ccp(4.0,0.0)
     var maxVelocity: CGPoint  = ccp(25.0,35.0)
     let equateStamp: Double = CACurrentMediaTime()
     
     func didLoadFromCCB() {
-        
+        body.physicsBody.mass = 0.1
     }
     
     override func update(delta: CCTime) {
@@ -20,6 +20,11 @@ class Character : CCNode {
         // X Limiter
         if body.physicsBody.velocity.x > maxVelocity.x {
             body.physicsBody.velocity.x = maxVelocity.x
+        }
+        
+        // Y Reducer
+        if body.physicsBody.velocity.y > maxVelocity.y {
+            body.physicsBody.velocity.y = body.physicsBody.velocity.y*0.80
         }
         
     }
