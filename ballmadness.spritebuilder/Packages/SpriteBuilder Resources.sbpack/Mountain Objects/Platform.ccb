@@ -10,7 +10,7 @@
 		<false/>
 	</dict>
 	<key>UUID</key>
-	<integer>5</integer>
+	<integer>7</integer>
 	<key>centeredOrigin</key>
 	<false/>
 	<key>currentResolution</key>
@@ -71,50 +71,50 @@
 					<key>cornerRadius</key>
 					<real>0.0</real>
 					<key>density</key>
-					<real>10</real>
+					<real>100</real>
 					<key>dynamic</key>
 					<true/>
 					<key>elasticity</key>
-					<real>0.10000000149011612</real>
+					<real>0.0</real>
 					<key>friction</key>
-					<real>0.30000001192092896</real>
+					<real>0.80000001192092896</real>
 					<key>points</key>
 					<array>
 						<array>
-							<real>4.6321091651916504</real>
-							<real>160.88270568847656</real>
+							<real>5.6497979164123535</real>
+							<real>162.64381408691406</real>
 						</array>
 						<array>
-							<real>0.74107754230499268</real>
-							<real>178.95152282714844</real>
+							<real>4.5270814895629883</real>
+							<real>178.71624755859375</real>
 						</array>
 						<array>
-							<real>84.294204711914062</real>
-							<real>184.6585693359375</real>
+							<real>79.648178100585938</real>
+							<real>184.4927978515625</real>
 						</array>
 						<array>
-							<real>82.479682922363281</real>
-							<real>165.54026794433594</real>
+							<real>78.212448120117188</real>
+							<real>167.09587097167969</real>
 						</array>
 					</array>
 					<key>polygons</key>
 					<array>
 						<array>
 							<array>
-								<real>82.479682922363281</real>
-								<real>165.54026794433594</real>
+								<real>78.212448120117188</real>
+								<real>167.09587097167969</real>
 							</array>
 							<array>
-								<real>84.294204711914062</real>
-								<real>184.6585693359375</real>
+								<real>79.648178100585938</real>
+								<real>184.4927978515625</real>
 							</array>
 							<array>
-								<real>0.74107754230499268</real>
-								<real>178.95152282714844</real>
+								<real>4.5270814895629883</real>
+								<real>178.71624755859375</real>
 							</array>
 							<array>
-								<real>4.6321091651916504</real>
-								<real>160.88270568847656</real>
+								<real>5.6497979164123535</real>
+								<real>162.64381408691406</real>
 							</array>
 						</array>
 					</array>

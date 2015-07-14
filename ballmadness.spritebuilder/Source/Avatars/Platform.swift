@@ -6,6 +6,7 @@ class Platform : CCNode {
     
     func didLoadFromCCB() {
         pillar.physicsBody.type = .Static
+        pillar.physicsBody.surfaceVelocity = ccp(10,0)
     }
     
 }

@@ -80,12 +80,15 @@
 		</dict>
 		<key>Character Assets</key>
 		<dict>
-			<key>isDirty</key>
-			<true/>
 			<key>isSmartSpriteSheet</key>
 			<true/>
 		</dict>
 		<key>Character Assets/Cat_10.png</key>
+		<dict>
+			<key>scaleFrom</key>
+			<integer>1</integer>
+		</dict>
+		<key>Character Assets/Cat_28.png</key>
 		<dict>
 			<key>scaleFrom</key>
 			<integer>1</integer>
@@ -121,6 +124,11 @@
 			<integer>1</integer>
 		</dict>
 		<key>Character Assets/Cat_9.png</key>
+		<dict>
+			<key>scaleFrom</key>
+			<integer>1</integer>
+		</dict>
+		<key>Character Assets/decal_blood.png</key>
 		<dict>
 			<key>scaleFrom</key>
 			<integer>1</integer>

@@ -58,7 +58,7 @@
 						<key>type</key>
 						<integer>1</integer>
 						<key>value</key>
-						<string>-138.000000</string>
+						<string>-133.000000</string>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -68,7 +68,7 @@
 						<key>type</key>
 						<integer>1</integer>
 						<key>value</key>
-						<string>-5.000000</string>
+						<string>0.000000</string>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -401,7 +401,7 @@
 						<key>type</key>
 						<integer>1</integer>
 						<key>value</key>
-						<string>-120.000000</string>
+						<string>-20.000000</string>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -411,7 +411,7 @@
 						<key>type</key>
 						<integer>1</integer>
 						<key>value</key>
-						<string>-5.000000</string>
+						<string>95.000000</string>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -721,9 +721,11 @@
 						<key>type</key>
 						<string>CCBFile</string>
 						<key>value</key>
-						<string>Generic Objects/SecondChance.ccb</string>
+						<string>Generic Objects/Ground.ccb</string>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -757,8 +759,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>164.855712890625</real>
-							<real>0.0</real>
+							<real>168</real>
+							<real>41</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -784,194 +786,6 @@
 						<string>CCBFile</string>
 						<key>value</key>
 						<string>Character Objects/DeathRotor.ccb</string>
-					</dict>
-				</array>
-				<key>selected</key>
-				<true/>
-			</dict>
-			<dict>
-				<key>UUID</key>
-				<integer>37</integer>
-				<key>baseClass</key>
-				<string>CCBFile</string>
-				<key>children</key>
-				<array/>
-				<key>customClass</key>
-				<string></string>
-				<key>displayName</key>
-				<string>CCBFile</string>
-				<key>memberVarAssignmentName</key>
-				<string></string>
-				<key>memberVarAssignmentType</key>
-				<integer>1</integer>
-				<key>properties</key>
-				<array>
-					<dict>
-						<key>name</key>
-						<string>name</string>
-						<key>type</key>
-						<string>StringSimple</string>
-						<key>value</key>
-						<string></string>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>position</string>
-						<key>type</key>
-						<string>Position</string>
-						<key>value</key>
-						<array>
-							<real>283</real>
-							<real>403.47445678710938</real>
-							<integer>0</integer>
-							<integer>0</integer>
-							<integer>0</integer>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>scale</string>
-						<key>type</key>
-						<string>ScaleLock</string>
-						<key>value</key>
-						<array>
-							<real>1</real>
-							<real>1</real>
-							<false/>
-							<integer>0</integer>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>ccbFile</string>
-						<key>type</key>
-						<string>CCBFile</string>
-						<key>value</key>
-						<string>Generic Objects/Wall.ccb</string>
-					</dict>
-				</array>
-			</dict>
-			<dict>
-				<key>UUID</key>
-				<integer>39</integer>
-				<key>baseClass</key>
-				<string>CCBFile</string>
-				<key>children</key>
-				<array/>
-				<key>customClass</key>
-				<string></string>
-				<key>displayName</key>
-				<string>CCBFile</string>
-				<key>memberVarAssignmentName</key>
-				<string></string>
-				<key>memberVarAssignmentType</key>
-				<integer>1</integer>
-				<key>properties</key>
-				<array>
-					<dict>
-						<key>name</key>
-						<string>name</string>
-						<key>type</key>
-						<string>StringSimple</string>
-						<key>value</key>
-						<string></string>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>position</string>
-						<key>type</key>
-						<string>Position</string>
-						<key>value</key>
-						<array>
-							<real>-20.066450119018555</real>
-							<real>174</real>
-							<integer>0</integer>
-							<integer>0</integer>
-							<integer>0</integer>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>scale</string>
-						<key>type</key>
-						<string>ScaleLock</string>
-						<key>value</key>
-						<array>
-							<real>1</real>
-							<real>1</real>
-							<false/>
-							<integer>0</integer>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>ccbFile</string>
-						<key>type</key>
-						<string>CCBFile</string>
-						<key>value</key>
-						<string>Generic Objects/WallVertical.ccb</string>
-					</dict>
-				</array>
-			</dict>
-			<dict>
-				<key>UUID</key>
-				<integer>40</integer>
-				<key>baseClass</key>
-				<string>CCBFile</string>
-				<key>children</key>
-				<array/>
-				<key>customClass</key>
-				<string></string>
-				<key>displayName</key>
-				<string>CCBFile</string>
-				<key>memberVarAssignmentName</key>
-				<string></string>
-				<key>memberVarAssignmentType</key>
-				<integer>1</integer>
-				<key>properties</key>
-				<array>
-					<dict>
-						<key>name</key>
-						<string>name</string>
-						<key>type</key>
-						<string>StringSimple</string>
-						<key>value</key>
-						<string></string>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>position</string>
-						<key>type</key>
-						<string>Position</string>
-						<key>value</key>
-						<array>
-							<real>590.3441162109375</real>
-							<real>340.04733276367188</real>
-							<integer>0</integer>
-							<integer>0</integer>
-							<integer>0</integer>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>scale</string>
-						<key>type</key>
-						<string>ScaleLock</string>
-						<key>value</key>
-						<array>
-							<real>1</real>
-							<real>1</real>
-							<false/>
-							<integer>0</integer>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>ccbFile</string>
-						<key>type</key>
-						<string>CCBFile</string>
-						<key>value</key>
-						<string>Generic Objects/WallVertical.ccb</string>
 					</dict>
 				</array>
 			</dict>

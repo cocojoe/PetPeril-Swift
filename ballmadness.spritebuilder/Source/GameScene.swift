@@ -14,6 +14,7 @@ class GameScene : CCNode,CCPhysicsCollisionDelegate {
     
     // Level Loading
     var levelLoader: CCNode!
+    var canSpawn = true
     
     // Important Points
     var startPoint: CGPoint = CGPointZero
@@ -27,14 +28,14 @@ class GameScene : CCNode,CCPhysicsCollisionDelegate {
         // Physics Setup
         physicsWorld.collisionDelegate = self
         physicsWorld.debugDraw = false
-        physicsWorld.space.damping = 0.80
+        //physicsWorld.space.damping = 0.10
   
         // Create World
         initialiseWorld()
         
         // Spawn Characters
         spawnCharacter()
-        self.schedule("spawnCharacter", interval: 2.0)
+        self.schedule("spawnCharacter", interval: 1.0)
     }
     
     // MARK: - Content Creation
@@ -65,6 +66,12 @@ class GameScene : CCNode,CCPhysicsCollisionDelegate {
     }
     
     func spawnCharacter() {
+        
+        // Spawn Disabled Check
+        if canSpawn == false {
+            return
+        }
+        
         let characterNode = CCBReader.load("Character Objects/TheCat") as! Character
         characterNode.position = startPoint
         physicsWorld.addChild(characterNode)
@@ -92,7 +99,27 @@ class GameScene : CCNode,CCPhysicsCollisionDelegate {
         }
     }
     
+    override func touchEnded(touch: CCTouch!, withEvent event: CCTouchEvent!) {
+        for platform in mechanical {
+            platform?.deadStop()
+        }
+    }
+    
     // MARK: - Physics
+    func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, characterSpawn: CCNode!, character characterBody: CCNode!) -> Bool {
+
+        canSpawn = false
+        
+        return false
+    }
+    
+    func ccPhysicsCollisionSeparate(pair: CCPhysicsCollisionPair!, characterSpawn: CCNode!, character characterBody: CCNode!) -> Bool {
+    
+        canSpawn = true
+        
+        return false
+    }
+    
     func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, characterSoftDeath: Sensor!, character characterBody: CCNode!) -> Bool {
         
         var character: Character = characterBody.parent as! Character
@@ -101,20 +128,19 @@ class GameScene : CCNode,CCPhysicsCollisionDelegate {
         return false
     }
     
-    func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, platform: PlatformControl!, character characterBody: CCNode!) -> Bool {
-        println("Character/Platform Begin")
+    func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, platform platformBody: CCNode!, character characterBody: CCNode!) -> Bool {
         
         var character: Character = characterBody.parent as! Character
-        character.active = true
-        
+        var platform: PlatformControl = platformBody.parent as! PlatformControl
+
         return true
     }
     
-    func ccPhysicsCollisionSeparate(pair: CCPhysicsCollisionPair!, platform: PlatformControl!, character characterBody: CCNode!) -> Bool {
-        println("Character/Platform End")
+    func ccPhysicsCollisionSeparate(pair: CCPhysicsCollisionPair!, platform platformBody: CCNode!, character characterBody: CCNode!) -> Bool {
         
         var character: Character = characterBody.parent as! Character
-        character.active = false
+        var platform: PlatformControl = platformBody.parent as! PlatformControl
+        
         return true
     }
     
@@ -122,7 +148,11 @@ class GameScene : CCNode,CCPhysicsCollisionDelegate {
         
         // Destroy Character
         var character: Character = characterBody.parent as! Character
-        removeCharacter(character)
+        
+        // Remove Character
+        physicsWorld.space.addPostStepBlock({
+            self.removeCharacter(character)
+            }, key:character)
         
         // Counter
         
