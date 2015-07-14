@@ -10,7 +10,8 @@ class PlatformControl : Platform {
     
     // Movement Clamping
     let verticalClamp: CGPoint = ccp(0,12.0)
-    var positionDiff: CGPoint = CGPointZero
+    var currentDirection: Int = 0
+    var lastDirection: Int = 0
     
     // Touch Enabled
     var enableControl = false
@@ -24,7 +25,7 @@ class PlatformControl : Platform {
         
         // Tweak Physics
         pillar.physicsBody.type = .Dynamic
-        pillar.physicsBody.mass = 50
+        pillar.physicsBody.mass = 25
         
         // Store Position
         initialPosition = pillar.position
@@ -39,6 +40,22 @@ class PlatformControl : Platform {
         
         // Clamp Horizontal Velocity
         pillar.physicsBody.velocity.x = 0
+        
+        /*
+        println("Pos: \(pillar.position)")
+        println("Min: \(minVertical)")
+        println("Max: \(maxVertical)")
+        */
+
+        // Check Vertical Constraints
+        if pillar.position.y <= minVertical {
+            deadStop()
+            pillar.position.y = minVertical
+        } else if pillar.position.y >= maxVertical {
+            deadStop()
+            pillar.position.y = maxVertical
+        }
+
     }
     
     // MARK:- Movement
@@ -48,8 +65,17 @@ class PlatformControl : Platform {
         // Ensure Controlled
         if enableControl == false { return }
         
-        positionDiff = ccpClamp(positionChange, ccpMult(verticalClamp,-1), verticalClamp)
-        pillar.physicsBody.applyImpulse(ccpMult(ccp(0,positionDiff.y*direction),100))
+        let positionDiff = ccpClamp(positionChange, ccpMult(verticalClamp,-1), verticalClamp)
+        currentDirection = positionDiff.y.signum
+        
+        // Quick Stop When Direction Change
+        if lastDirection != currentDirection { deadStop() }
+        
+        // Apply Impulse
+        pillar.physicsBody.applyImpulse(ccpMult(ccp(0,positionDiff.y*direction),150))
+        
+        // Set Last Direction
+        lastDirection = currentDirection
         
     }
     

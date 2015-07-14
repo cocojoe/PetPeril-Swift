@@ -106,3 +106,10 @@ extension String {
         return CGFloat((self as NSString).floatValue)
     }
 }
+
+extension CGFloat {
+    var signum: Int {
+        return (self < 0) ? -1 : (self > 0) ? +1 : 0;
+    }
+}
+

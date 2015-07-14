@@ -133,6 +133,8 @@
 						<string>Mountain Objects/Platform.ccb</string>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -724,8 +726,6 @@
 						<string>Generic Objects/Ground.ccb</string>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>

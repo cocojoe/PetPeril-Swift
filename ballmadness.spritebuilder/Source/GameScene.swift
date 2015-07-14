@@ -28,7 +28,7 @@ class GameScene : CCNode,CCPhysicsCollisionDelegate {
         // Physics Setup
         physicsWorld.collisionDelegate = self
         physicsWorld.debugDraw = false
-        //physicsWorld.space.damping = 0.10
+        physicsWorld.space.damping = 0.50
   
         // Create World
         initialiseWorld()
