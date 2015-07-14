@@ -206,9 +206,12 @@ class GameScene : CCNode,CCPhysicsCollisionDelegate {
         // Add Effects
         shake()
         
+        //Character Position
+        let decalPosition = character.convertToWorldSpace(characterBody.position)
+        
         // Blood Effect Decal
         let decal: CCSprite = CCSprite(imageNamed:"Character Assets/decal_blood.png")
-        decal.position = ccpAdd(death.position,ccp(0,death.body.contentSize.height*0.5))
+        decal.position = decalPosition
         decal.rotation = Float.random(min: 0, max: 360)
         self.addChild(decal, z: 10)
         
