@@ -29,7 +29,7 @@ class GameScene : CCNode,CCPhysicsCollisionDelegate {
         physicsWorld.collisionDelegate = self
         physicsWorld.debugDraw = false
         //physicsWorld.space.damping = 0.90
-  
+        
         // Create World
         initialiseWorld()
         
@@ -119,14 +119,14 @@ class GameScene : CCNode,CCPhysicsCollisionDelegate {
     
     // MARK: - Physics
     func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, characterSpawn: CCNode!, character characterBody: CCNode!) -> Bool {
-
+        
         canSpawn = false
         
         return false
     }
     
     func ccPhysicsCollisionSeparate(pair: CCPhysicsCollisionPair!, characterSpawn: CCNode!, character characterBody: CCNode!) -> Bool {
-    
+        
         canSpawn = true
         
         return false
@@ -144,7 +144,7 @@ class GameScene : CCNode,CCPhysicsCollisionDelegate {
         
         var character: Character = characterBody.parent as! Character
         var platform: PlatformControl = platformBody.parent as! PlatformControl
-
+        
         return true
     }
     
@@ -226,7 +226,7 @@ class GameScene : CCNode,CCPhysicsCollisionDelegate {
         // Remove Character
         physicsWorld.space.addPostStepBlock({
             self.removeCharacter(character)
-        }, key:character)
+            }, key:character)
         
         return false
     }
@@ -249,7 +249,7 @@ class GameScene : CCNode,CCPhysicsCollisionDelegate {
     // MARK: - Game Keeping
     
     func killCharacter(character: Character) {
-    
+        
         // Disable Physics
         character.disablePhysics()
         
@@ -260,15 +260,15 @@ class GameScene : CCNode,CCPhysicsCollisionDelegate {
         let actionFunc  = CCActionCallBlock(block:{
             self.removeCharacter(character)
         })
-    
+        
         character.body.animationManager.runAnimationsForSequenceNamed("Death")
-    
+        
         character.body.runAction(actionMove)
         character.body.runAction(CCActionSequence(array: [actionDelay,actionFade,actionFunc]))
     }
-
+    
     func removeCharacter(character: Character) {
-
+        
         for (index,arrayCharacter) in enumerate(characters) {
             if character==arrayCharacter {
                 characters.removeAtIndex(index)

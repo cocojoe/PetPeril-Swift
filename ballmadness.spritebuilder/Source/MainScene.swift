@@ -1,12 +1,13 @@
 import Foundation
 
-class MainScene: CCNode {
-    
-    // MARK: - UI Actions
-    
-    func gameStart() {
-        var gameScene: CCScene = CCBReader.loadAsScene("GameScene")
-        CCDirector.sharedDirector().replaceScene(gameScene);
-    }
+/*
+ * Button Colour: 5aa3ee
+ *
+ */
 
+class MainScene: CCNode {
+    var characterLeft: Character!
+    var characterMiddle: Character!
+    var characterRight: Character!
+    
 }

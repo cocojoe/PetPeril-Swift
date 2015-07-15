@@ -64,7 +64,7 @@
 									<integer>7</integer>
 									<key>value</key>
 									<array>
-										<string>Character Assets/Cat_3.png</string>
+										<string>Character Assets/Frog_3.png</string>
 										<string>Use regular file</string>
 									</array>
 								</dict>
@@ -82,7 +82,7 @@
 									<integer>7</integer>
 									<key>value</key>
 									<array>
-										<string>Character Assets/Cat_4.png</string>
+										<string>Character Assets/Frog_4.png</string>
 										<string>Use regular file</string>
 									</array>
 								</dict>
@@ -100,7 +100,7 @@
 									<integer>7</integer>
 									<key>value</key>
 									<array>
-										<string>Character Assets/Cat_5.png</string>
+										<string>Character Assets/Frog_5.png</string>
 										<string>Use regular file</string>
 									</array>
 								</dict>
@@ -118,7 +118,7 @@
 									<integer>7</integer>
 									<key>value</key>
 									<array>
-										<string>Character Assets/Cat_6.png</string>
+										<string>Character Assets/Frog_6.png</string>
 										<string>Use regular file</string>
 									</array>
 								</dict>
@@ -136,7 +136,7 @@
 									<integer>7</integer>
 									<key>value</key>
 									<array>
-										<string>Character Assets/Cat_7.png</string>
+										<string>Character Assets/Frog_7.png</string>
 										<string>Use regular file</string>
 									</array>
 								</dict>
@@ -154,7 +154,7 @@
 									<integer>7</integer>
 									<key>value</key>
 									<array>
-										<string>Character Assets/Cat_8.png</string>
+										<string>Character Assets/Frog_8.png</string>
 										<string>Use regular file</string>
 									</array>
 								</dict>
@@ -172,7 +172,7 @@
 									<integer>7</integer>
 									<key>value</key>
 									<array>
-										<string>Character Assets/Cat_9.png</string>
+										<string>Character Assets/Frog_9.png</string>
 										<string>Use regular file</string>
 									</array>
 								</dict>
@@ -190,7 +190,7 @@
 									<integer>7</integer>
 									<key>value</key>
 									<array>
-										<string>Character Assets/Cat_10.png</string>
+										<string>Character Assets/Frog_10.png</string>
 										<string>Use regular file</string>
 									</array>
 								</dict>
@@ -299,7 +299,7 @@
 					<dict>
 						<key>baseValue</key>
 						<array>
-							<string>Character Assets/Cat_28.png</string>
+							<string>Character Assets/Frog_28.png</string>
 							<string>Use regular file</string>
 						</array>
 						<key>name</key>
@@ -309,7 +309,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>Character Assets/Cat_28.png</string>
+							<string>Character Assets/Frog_28.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -345,6 +345,8 @@
 						<array/>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 				<key>seqExpanded</key>
 				<true/>
 			</dict>

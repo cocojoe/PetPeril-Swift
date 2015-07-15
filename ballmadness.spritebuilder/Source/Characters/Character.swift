@@ -13,6 +13,8 @@ class Character : CCNode {
     
     override func update(delta: CCTime) {
         
+        if body.physicsBody == nil { return }
+        
         if body.physicsBody.velocity.y >= -0.5 {
             body.physicsBody.applyImpulse(acceleration)
         }
