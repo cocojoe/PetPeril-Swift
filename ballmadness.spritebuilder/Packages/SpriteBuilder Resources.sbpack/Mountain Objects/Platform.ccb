@@ -81,8 +81,8 @@
 					<key>points</key>
 					<array>
 						<array>
-							<real>5.6497979164123535</real>
-							<real>162.64381408691406</real>
+							<real>4.5662541389465332</real>
+							<real>162.89497375488281</real>
 						</array>
 						<array>
 							<real>4.5270814895629883</real>
@@ -113,8 +113,8 @@
 								<real>178.71624755859375</real>
 							</array>
 							<array>
-								<real>5.6497979164123535</real>
-								<real>162.64381408691406</real>
+								<real>4.5662541389465332</real>
+								<real>162.89497375488281</real>
 							</array>
 						</array>
 					</array>
@@ -175,7 +175,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>World Mountain/grass_platform_1.png</string>
+							<string>Character Assets/grass_platform_1.png</string>
 						</array>
 					</dict>
 					<dict>

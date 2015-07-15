@@ -19,6 +19,11 @@ class Character : CCNode {
             body.physicsBody.applyImpulse(acceleration)
         }
         
+        if body.physicsBody.velocity.x < 0 {
+            body.physicsBody.velocity.x = acceleration.x
+            body.physicsBody.applyImpulse(acceleration)
+        }
+        
         // X Limiter
         if body.physicsBody.velocity.x > maxVelocity.x {
             body.physicsBody.velocity.x = maxVelocity.x

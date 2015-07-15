@@ -21,6 +21,9 @@
 		5BCD27231B4CDE8F0003A13C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCD27221B4CDE8F0003A13C /* Extensions.swift */; };
 		5BCD27241B4CDE8F0003A13C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCD27221B4CDE8F0003A13C /* Extensions.swift */; };
 		5BD6B8481B55B8CF00C36F19 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD6B8471B55B8CF00C36F19 /* Button.swift */; };
+		5BDF71091B56DE7C0008E6C7 /* CharacterFrog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDF71081B56DE7C0008E6C7 /* CharacterFrog.swift */; };
+		5BDF710D1B56DF090008E6C7 /* CharacterCat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDF710C1B56DF090008E6C7 /* CharacterCat.swift */; };
+		5BDF710F1B56DF690008E6C7 /* CharacterPanda.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDF710E1B56DF690008E6C7 /* CharacterPanda.swift */; };
 		5BF3E1601B54F6ED00C4634A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BF3E1561B54F6ED00C4634A /* Default-568h@2x.png */; };
 		5BF3E1611B54F6ED00C4634A /* Default-667h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BF3E1571B54F6ED00C4634A /* Default-667h@2x.png */; };
 		5BF3E1621B54F6ED00C4634A /* Default-Landscape-736h@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BF3E1581B54F6ED00C4634A /* Default-Landscape-736h@3x.png */; };
@@ -178,6 +181,9 @@
 		5BCD271A1B4CCD870003A13C /* Platform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Platform.swift; path = Source/Avatars/Platform.swift; sourceTree = "<group>"; };
 		5BCD27221B4CDE8F0003A13C /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		5BD6B8471B55B8CF00C36F19 /* Button.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		5BDF71081B56DE7C0008E6C7 /* CharacterFrog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterFrog.swift; sourceTree = "<group>"; };
+		5BDF710C1B56DF090008E6C7 /* CharacterCat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterCat.swift; sourceTree = "<group>"; };
+		5BDF710E1B56DF690008E6C7 /* CharacterPanda.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterPanda.swift; sourceTree = "<group>"; };
 		5BF3E1561B54F6ED00C4634A /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		5BF3E1571B54F6ED00C4634A /* Default-667h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-667h@2x.png"; sourceTree = "<group>"; };
 		5BF3E1581B54F6ED00C4634A /* Default-Landscape-736h@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape-736h@3x.png"; sourceTree = "<group>"; };
@@ -353,9 +359,12 @@
 		5BAEDF5E1B4F8F0A00DC18DF /* Characters */ = {
 			isa = PBXGroup;
 			children = (
+				5BDF710E1B56DF690008E6C7 /* CharacterPanda.swift */,
+				5BDF710C1B56DF090008E6C7 /* CharacterCat.swift */,
+				5BDF71081B56DE7C0008E6C7 /* CharacterFrog.swift */,
+				5BAEDF5F1B4F8F0A00DC18DF /* Character.swift */,
 				5B1A7C881B51888900AE10CB /* DeathRotor.swift */,
 				5B1A7C861B51881F00AE10CB /* Death.swift */,
-				5BAEDF5F1B4F8F0A00DC18DF /* Character.swift */,
 			);
 			name = Characters;
 			path = Source/Characters;
@@ -884,7 +893,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BDF710F1B56DF690008E6C7 /* CharacterPanda.swift in Sources */,
 				5BCD271B1B4CCD870003A13C /* Platform.swift in Sources */,
+				5BDF71091B56DE7C0008E6C7 /* CharacterFrog.swift in Sources */,
 				5BCD27231B4CDE8F0003A13C /* Extensions.swift in Sources */,
 				B73789871807631A0076A88C /* main.m in Sources */,
 				5B1A7C891B51888900AE10CB /* DeathRotor.swift in Sources */,
@@ -894,6 +905,7 @@
 				5B1A7C871B51881F00AE10CB /* Death.swift in Sources */,
 				5BAEDF591B4F795F00DC18DF /* PlatformControl.swift in Sources */,
 				5B121038197487F2004C1E1D /* AppDelegate.m in Sources */,
+				5BDF710D1B56DF090008E6C7 /* CharacterCat.swift in Sources */,
 				5B1A7C851B5180D200AE10CB /* Goal.swift in Sources */,
 				5BD6B8481B55B8CF00C36F19 /* Button.swift in Sources */,
 				5BAEDF601B4F8F0A00DC18DF /* Character.swift in Sources */,

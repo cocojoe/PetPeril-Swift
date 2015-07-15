@@ -350,7 +350,7 @@
 			</dict>
 		</array>
 		<key>customClass</key>
-		<string>Character</string>
+		<string>CharacterFrog</string>
 		<key>displayName</key>
 		<string>CCNode</string>
 		<key>memberVarAssignmentName</key>
