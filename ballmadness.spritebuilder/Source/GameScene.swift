@@ -33,6 +33,9 @@ class GameScene : CCNode,CCPhysicsCollisionDelegate {
         // Create World
         initialiseWorld()
         
+        // Any Buttons Require Delegate Setting to Self
+        registerButtonDelegates()
+        
         // Spawn Characters
         spawnCharacter()
         self.schedule("spawnCharacter", interval: 2.0)
@@ -75,11 +78,13 @@ class GameScene : CCNode,CCPhysicsCollisionDelegate {
         // Random Character
         var characterName: String?
         
-        switch Int.random(min: 1, max: 2) {
+        switch Int.random(min: 1, max: 3) {
         case 1:
             characterName = "Character Objects/TheCat"
         case 2:
             characterName = "Character Objects/ThePanda"
+        case 3:
+            characterName = "Character Objects/TheFrog"
         default:
             println("No Valid Character")
         }
@@ -230,16 +235,7 @@ class GameScene : CCNode,CCPhysicsCollisionDelegate {
         
         return false
     }
-    
-    // MARK: - UX
-    
-    func restart() {
-        cleanScene()
-        
-        var gameScene: CCScene = CCBReader.loadAsScene("GameScene")
-        CCDirector.sharedDirector().replaceScene(gameScene);
-    }
-    
+
     // MARK: - Effects
     
     func shake() {
@@ -288,6 +284,32 @@ class GameScene : CCNode,CCPhysicsCollisionDelegate {
         
         // Clear Control Platforms
         mechanical.removeAll(keepCapacity: false)
+    }
+    
+    func registerButtonDelegates() {
+        
+        // Any Buttons Require Delegate Setting to Self
+        for childNode in self.children as! [CCNode] {
+            
+            // Enable Control for Tagged Platforms
+            if childNode.name == "button" {
+                
+                var buttonNode = childNode as! Button
+                buttonNode.delegate = self
+            }
+        }
+    }
+    
+}
+
+// MARK:- UX Delegate
+extension GameScene: ButtonDelegate {
+    
+    func retryButton() {
+        cleanScene()
+        
+        var gameScene: CCScene = CCBReader.loadAsScene("GameScene")
+        CCDirector.sharedDirector().replaceScene(gameScene);
     }
     
 }

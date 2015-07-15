@@ -3,7 +3,7 @@ import Foundation
 class Character : CCNode {
     
     var body: CCSprite!
-    var acceleration: CGPoint = ccp(4.0,0.0)
+    var acceleration: CGPoint = ccp(5.0,0.0)
     var maxVelocity: CGPoint  = ccp(25.0,35.0)
     let equateStamp: Double = CACurrentMediaTime()
     
