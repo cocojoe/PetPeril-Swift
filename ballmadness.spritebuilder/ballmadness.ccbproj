@@ -173,6 +173,16 @@
 			<key>scaleFrom</key>
 			<integer>1</integer>
 		</dict>
+		<key>Character Assets/button_exit.png</key>
+		<dict>
+			<key>scaleFrom</key>
+			<integer>2</integer>
+		</dict>
+		<key>Character Assets/button_pause.png</key>
+		<dict>
+			<key>scaleFrom</key>
+			<integer>2</integer>
+		</dict>
 		<key>Character Assets/button_play.png</key>
 		<dict>
 			<key>scaleFrom</key>
@@ -184,6 +194,31 @@
 			<integer>2</integer>
 		</dict>
 		<key>Character Assets/decal_blood.png</key>
+		<dict>
+			<key>scaleFrom</key>
+			<integer>1</integer>
+		</dict>
+		<key>Character Assets/flag-green.png</key>
+		<dict>
+			<key>scaleFrom</key>
+			<integer>1</integer>
+		</dict>
+		<key>Character Assets/level1-green.png</key>
+		<dict>
+			<key>scaleFrom</key>
+			<integer>1</integer>
+		</dict>
+		<key>Character Assets/level2-green.png</key>
+		<dict>
+			<key>scaleFrom</key>
+			<integer>1</integer>
+		</dict>
+		<key>Character Assets/level3-green.png</key>
+		<dict>
+			<key>scaleFrom</key>
+			<integer>1</integer>
+		</dict>
+		<key>Character Assets/start-green.png</key>
 		<dict>
 			<key>scaleFrom</key>
 			<integer>1</integer>

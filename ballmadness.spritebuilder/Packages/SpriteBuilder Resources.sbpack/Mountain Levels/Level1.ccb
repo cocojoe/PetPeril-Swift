@@ -10,7 +10,7 @@
 		<false/>
 	</dict>
 	<key>UUID</key>
-	<integer>41</integer>
+	<integer>42</integer>
 	<key>centeredOrigin</key>
 	<false/>
 	<key>currentResolution</key>
@@ -68,7 +68,7 @@
 						<key>type</key>
 						<integer>1</integer>
 						<key>value</key>
-						<string>0.000000</string>
+						<string>-5.000000</string>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -104,7 +104,7 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>306</real>
+							<real>301</real>
 							<real>-5</real>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -133,8 +133,6 @@
 						<string>Mountain Objects/Platform.ccb</string>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -230,8 +228,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>528</real>
-							<real>137.00001525878906</real>
+							<real>531</real>
+							<real>123.00001525878906</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -292,8 +290,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>196</real>
-							<real>-37</real>
+							<real>186</real>
+							<real>-41</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -635,8 +633,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>568</real>
-							<real>169</real>
+							<real>559</real>
+							<real>163</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -727,6 +725,68 @@
 					</dict>
 				</array>
 			</dict>
+			<dict>
+				<key>UUID</key>
+				<integer>41</integer>
+				<key>baseClass</key>
+				<string>CCBFile</string>
+				<key>children</key>
+				<array/>
+				<key>customClass</key>
+				<string></string>
+				<key>displayName</key>
+				<string>PlatformControl</string>
+				<key>memberVarAssignmentName</key>
+				<string></string>
+				<key>memberVarAssignmentType</key>
+				<integer>1</integer>
+				<key>properties</key>
+				<array>
+					<dict>
+						<key>name</key>
+						<string>name</string>
+						<key>type</key>
+						<string>StringSimple</string>
+						<key>value</key>
+						<string></string>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>position</string>
+						<key>type</key>
+						<string>Position</string>
+						<key>value</key>
+						<array>
+							<real>88</real>
+							<real>241</real>
+							<integer>0</integer>
+							<integer>0</integer>
+							<integer>0</integer>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>scale</string>
+						<key>type</key>
+						<string>ScaleLock</string>
+						<key>value</key>
+						<array>
+							<real>1</real>
+							<real>1</real>
+							<false/>
+							<integer>0</integer>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>ccbFile</string>
+						<key>type</key>
+						<string>CCBFile</string>
+						<key>value</key>
+						<string>Mountain Objects/PlatformPortal.ccb</string>
+					</dict>
+				</array>
+			</dict>
 		</array>
 		<key>customClass</key>
 		<string></string>
@@ -798,6 +858,8 @@
 				</array>
 			</dict>
 		</array>
+		<key>selected</key>
+		<true/>
 	</dict>
 	<key>notes</key>
 	<array/>

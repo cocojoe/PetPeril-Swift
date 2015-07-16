@@ -2,7 +2,7 @@ import Foundation
 
 class Character : CCNode {
     
-    var body: CCSprite!
+    weak var body: CCSprite!
     var acceleration: CGPoint = ccp(5.0,0.0)
     var maxVelocity: CGPoint  = ccp(25.0,35.0)
     let equateStamp: Double = CACurrentMediaTime()
@@ -17,8 +17,16 @@ class Character : CCNode {
         
         if body.physicsBody.velocity.y >= -0.5 {
             body.physicsBody.applyImpulse(acceleration)
+            
+            // Resume Walking Animation
+            body.animationManager.paused = false
+        } else {
+            // Pause Walking Animation
+            body.animationManager.paused = true
         }
         
+        
+        // Stop Backwards Movement
         if body.physicsBody.velocity.x < 0 {
             body.physicsBody.velocity.x = acceleration.x
             body.physicsBody.applyImpulse(acceleration)

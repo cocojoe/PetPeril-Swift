@@ -38,6 +38,8 @@ class Button : CCSprite {
                 delegate?.playButton?()
             case "retry":
                 delegate?.retryButton?()
+            case "exit":
+                delegate?.exitButton?()
         default:
             println("No Action")
             ignoreTouch = false // Resume Touch
@@ -49,4 +51,5 @@ class Button : CCSprite {
 @objc protocol ButtonDelegate {
     optional func playButton()
     optional func retryButton()
+    optional func exitButton()
 }

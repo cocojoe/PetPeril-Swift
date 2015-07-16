@@ -6,18 +6,21 @@ class GameScene : CCNode,CCPhysicsCollisionDelegate {
     let designSize = CCDirector.sharedDirector().designSize
     
     // Core Nodes
-    var physicsWorld: CCPhysicsNode!
+    weak var physicsWorld: CCPhysicsNode!
     
     // Groups
     var mechanical: [PlatformControl?] = []
     var characters: [Character?] = []
     
     // Level Loading
-    var levelLoader: CCNode!
+    weak var levelLoader: CCNode!
     var canSpawn = true
     
     // Important Points
     var startPoint: CGPoint = CGPointZero
+    
+    // UX Node
+    weak var uxLayer: CCNode!
     
     func didLoadFromCCB() {
         
@@ -310,6 +313,17 @@ extension GameScene: ButtonDelegate {
         
         var gameScene: CCScene = CCBReader.loadAsScene("GameScene")
         CCDirector.sharedDirector().replaceScene(gameScene);
+    }
+    
+    func exitButton() {
+        cleanScene()
+        
+        var gameScene: CCScene = CCBReader.loadAsScene("MainScene")
+        CCDirector.sharedDirector().replaceScene(gameScene);
+    }
+    
+    func playButton() {
+        self.paused = !self.paused
     }
     
 }

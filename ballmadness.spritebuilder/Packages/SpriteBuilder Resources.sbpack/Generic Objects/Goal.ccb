@@ -10,7 +10,7 @@
 		<false/>
 	</dict>
 	<key>UUID</key>
-	<integer>3</integer>
+	<integer>4</integer>
 	<key>centeredOrigin</key>
 	<false/>
 	<key>currentResolution</key>
@@ -41,15 +41,15 @@
 		<array>
 			<dict>
 				<key>UUID</key>
-				<integer>2</integer>
+				<integer>3</integer>
 				<key>baseClass</key>
-				<string>CCNodeColor</string>
+				<string>CCSprite</string>
 				<key>children</key>
 				<array/>
 				<key>customClass</key>
 				<string></string>
 				<key>displayName</key>
-				<string>CCNodeColor</string>
+				<string>flag-green</string>
 				<key>memberVarAssignmentName</key>
 				<string>sensor</string>
 				<key>memberVarAssignmentType</key>
@@ -61,7 +61,7 @@
 					<key>allowsRotation</key>
 					<true/>
 					<key>bodyShape</key>
-					<integer>0</integer>
+					<integer>1</integer>
 					<key>collisionCategories</key>
 					<array/>
 					<key>collisionMask</key>
@@ -69,7 +69,7 @@
 					<key>collisionType</key>
 					<string>characterGoal</string>
 					<key>cornerRadius</key>
-					<real>0.0</real>
+					<real>10.875</real>
 					<key>density</key>
 					<real>1</real>
 					<key>dynamic</key>
@@ -81,43 +81,12 @@
 					<key>points</key>
 					<array>
 						<array>
-							<real>0.0</real>
-							<real>0.0</real>
-						</array>
-						<array>
-							<real>0.0</real>
-							<real>16</real>
-						</array>
-						<array>
 							<real>16</real>
 							<real>16</real>
-						</array>
-						<array>
-							<real>16</real>
-							<real>0.0</real>
 						</array>
 					</array>
 					<key>polygons</key>
-					<array>
-						<array>
-							<array>
-								<real>16</real>
-								<real>0.0</real>
-							</array>
-							<array>
-								<real>16</real>
-								<real>16</real>
-							</array>
-							<array>
-								<real>0.0</real>
-								<real>16</real>
-							</array>
-							<array>
-								<real>0.0</real>
-								<real>0.0</real>
-							</array>
-						</array>
-					</array>
+					<array/>
 				</dict>
 				<key>properties</key>
 				<array>
@@ -139,19 +108,6 @@
 							<real>0.0</real>
 							<real>0.0</real>
 							<integer>0</integer>
-							<integer>0</integer>
-							<integer>0</integer>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>contentSize</string>
-						<key>type</key>
-						<string>Size</string>
-						<key>value</key>
-						<array>
-							<real>16</real>
-							<real>16</real>
 							<integer>0</integer>
 							<integer>0</integer>
 						</array>
@@ -182,26 +138,50 @@
 					</dict>
 					<dict>
 						<key>name</key>
+						<string>spriteFrame</string>
+						<key>type</key>
+						<string>SpriteFrame</string>
+						<key>value</key>
+						<array>
+							<string></string>
+							<string>Character Assets/flag-green.png</string>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>normalMapSpriteFrame</string>
+						<key>type</key>
+						<string>SpriteFrame</string>
+						<key>value</key>
+						<array>
+							<string></string>
+							<string></string>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
 						<string>color</string>
 						<key>type</key>
 						<string>Color3</string>
 						<key>value</key>
 						<array>
-							<real>0.20999999344348907</real>
-							<real>0.64999997615814209</real>
-							<real>0.87000000476837158</real>
+							<real>1</real>
+							<real>1</real>
+							<real>1</real>
 							<real>1</real>
 						</array>
 					</dict>
 					<dict>
 						<key>name</key>
-						<string>opacity</string>
+						<string>effects</string>
 						<key>type</key>
-						<string>Float</string>
+						<string>EffectControl</string>
 						<key>value</key>
-						<real>1</real>
+						<array/>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 		</array>
 		<key>customClass</key>
