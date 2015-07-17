@@ -10,7 +10,7 @@
 		<false/>
 	</dict>
 	<key>UUID</key>
-	<integer>62</integer>
+	<integer>89</integer>
 	<key>centeredOrigin</key>
 	<false/>
 	<key>currentResolution</key>
@@ -387,7 +387,7 @@
 								<key>type</key>
 								<integer>3</integer>
 								<key>value</key>
-								<string>play</string>
+								<string>pause</string>
 							</dict>
 						</array>
 						<key>displayName</key>
@@ -468,6 +468,14 @@
 							</dict>
 							<dict>
 								<key>name</key>
+								<string>opacity</string>
+								<key>type</key>
+								<string>Float</string>
+								<key>value</key>
+								<real>0.64999997615814209</real>
+							</dict>
+							<dict>
+								<key>name</key>
 								<string>color</string>
 								<key>type</key>
 								<string>Color3</string>
@@ -476,7 +484,7 @@
 									<real>1</real>
 									<real>1</real>
 									<real>1</real>
-									<real>1</real>
+									<real>0.64999997615814209</real>
 								</array>
 							</dict>
 							<dict>
@@ -488,8 +496,6 @@
 								<array/>
 							</dict>
 						</array>
-						<key>selected</key>
-						<true/>
 						<key>seqExpanded</key>
 						<true/>
 					</dict>
@@ -600,6 +606,14 @@
 									</dict>
 									<dict>
 										<key>name</key>
+										<string>opacity</string>
+										<key>type</key>
+										<string>Float</string>
+										<key>value</key>
+										<real>0.64999997615814209</real>
+									</dict>
+									<dict>
+										<key>name</key>
 										<string>color</string>
 										<key>type</key>
 										<string>Color3</string>
@@ -608,7 +622,7 @@
 											<real>1</real>
 											<real>1</real>
 											<real>1</real>
-											<real>1</real>
+											<real>0.64999997615814209</real>
 										</array>
 									</dict>
 									<dict>
@@ -723,6 +737,14 @@
 									</dict>
 									<dict>
 										<key>name</key>
+										<string>opacity</string>
+										<key>type</key>
+										<string>Float</string>
+										<key>value</key>
+										<real>0.64999997615814209</real>
+									</dict>
+									<dict>
+										<key>name</key>
 										<string>color</string>
 										<key>type</key>
 										<string>Color3</string>
@@ -731,7 +753,7 @@
 											<real>1</real>
 											<real>1</real>
 											<real>1</real>
-											<real>1</real>
+											<real>0.64999997615814209</real>
 										</array>
 									</dict>
 									<dict>
@@ -752,11 +774,19 @@
 						<key>displayName</key>
 						<string>UX Extra</string>
 						<key>memberVarAssignmentName</key>
-						<string>uxLayer</string>
+						<string>uxHiddenLayer</string>
 						<key>memberVarAssignmentType</key>
 						<integer>1</integer>
 						<key>properties</key>
 						<array>
+							<dict>
+								<key>name</key>
+								<string>visible</string>
+								<key>type</key>
+								<string>Check</string>
+								<key>value</key>
+								<false/>
+							</dict>
 							<dict>
 								<key>name</key>
 								<string>name</string>
@@ -817,6 +847,8 @@
 								</array>
 							</dict>
 						</array>
+						<key>selected</key>
+						<true/>
 					</dict>
 				</array>
 				<key>customClass</key>

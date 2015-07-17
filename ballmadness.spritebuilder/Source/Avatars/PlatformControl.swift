@@ -9,7 +9,7 @@ class PlatformControl : Platform {
     var initialPosition: CGPoint = CGPointZero
     
     // Movement Clamping
-    let verticalClamp: CGPoint = ccp(0,12.0)
+    let verticalClamp: CGPoint = ccp(0,25.0)
     var currentDirection: Int = 0
     var lastDirection: Int = 0
     

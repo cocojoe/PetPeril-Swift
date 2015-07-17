@@ -107,9 +107,33 @@ extension String {
     }
 }
 
+// MARK:- Maths
+
 extension CGFloat {
     var signum: Int {
         return (self < 0) ? -1 : (self > 0) ? +1 : 0;
     }
 }
 
+// MARK:- Cocos2D
+extension CCNode:ButtonDelegate {
+    
+    func registerButtonDelegates(node: CCNode) {
+        
+        // Any Buttons Require Delegate Setting to Self
+        for childNode in node.children as! [CCNode] {
+            
+            // Enable Control for Tagged Platforms
+            if childNode.name == "button" {
+                
+                var buttonNode = childNode as! Button
+                buttonNode.delegate = self
+            }
+            
+            if childNode.children != nil {
+                registerButtonDelegates(childNode)
+            }
+        }
+    }
+    
+}

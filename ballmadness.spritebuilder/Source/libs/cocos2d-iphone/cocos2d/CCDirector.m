@@ -191,6 +191,8 @@ static CCDirector *_sharedDirector = nil;
 		[_scheduler setPaused:NO target:_actionManager];
 		[_scheduler setPaused:NO target:_actionManagerFixed];
 		
+        //HACKS
+        _physicsGroup = @"monsterGroup";
 		
 		// touch manager
 		_responderManager = [ CCResponderManager responderManager ];

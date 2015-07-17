@@ -19,8 +19,8 @@ class GameScene : CCNode,CCPhysicsCollisionDelegate {
     // Important Points
     var startPoint: CGPoint = CGPointZero
     
-    // UX Node
-    weak var uxLayer: CCNode!
+    // UX Node(s)
+    weak var uxHiddenLayer: CCNode!
     
     func didLoadFromCCB() {
         
@@ -37,11 +37,13 @@ class GameScene : CCNode,CCPhysicsCollisionDelegate {
         initialiseWorld()
         
         // Any Buttons Require Delegate Setting to Self
-        registerButtonDelegates()
+        registerButtonDelegates(self)
         
         // Spawn Characters
-        spawnCharacter()
-        self.schedule("spawnCharacter", interval: 2.0)
+        physicsWorld.spawnCharacter()
+        
+        // Schedules
+        physicsWorld.registerSchedules()
     }
     
     // MARK: - Content Creation
@@ -69,34 +71,6 @@ class GameScene : CCNode,CCPhysicsCollisionDelegate {
                 childNode.visible = false
             }
         }
-    }
-    
-    func spawnCharacter() {
-        
-        // Spawn Disabled Check
-        if canSpawn == false {
-            return
-        }
-        
-        // Random Character
-        var characterName: String?
-        
-        switch Int.random(min: 1, max: 3) {
-        case 1:
-            characterName = "Character Objects/TheCat"
-        case 2:
-            characterName = "Character Objects/ThePanda"
-        case 3:
-            characterName = "Character Objects/TheFrog"
-        default:
-            println("No Valid Character")
-        }
-        
-        let characterNode = CCBReader.load(characterName) as! Character
-        characterNode.position = startPoint
-        physicsWorld.addChild(characterNode)
-        
-        characters.append(characterNode)
     }
     
     // MARK: - Game Loop
@@ -164,6 +138,7 @@ class GameScene : CCNode,CCPhysicsCollisionDelegate {
         return true
     }
     
+    /*
     func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, character characterBody1: CCNode!, character characterBody2: CCNode!) -> Bool {
         
         // Destroy Character
@@ -189,6 +164,7 @@ class GameScene : CCNode,CCPhysicsCollisionDelegate {
         
         return true
     }
+    */
     
     func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, character characterBody: CCNode!, characterGoal: Goal!) -> Bool {
         
@@ -282,25 +258,13 @@ class GameScene : CCNode,CCPhysicsCollisionDelegate {
     
     func cleanScene() {
         
+        unscheduleAllSelectors()
+        
         // Clear Characters
         characters.removeAll(keepCapacity: false)
         
         // Clear Control Platforms
         mechanical.removeAll(keepCapacity: false)
-    }
-    
-    func registerButtonDelegates() {
-        
-        // Any Buttons Require Delegate Setting to Self
-        for childNode in self.children as! [CCNode] {
-            
-            // Enable Control for Tagged Platforms
-            if childNode.name == "button" {
-                
-                var buttonNode = childNode as! Button
-                buttonNode.delegate = self
-            }
-        }
     }
     
 }
@@ -322,8 +286,51 @@ extension GameScene: ButtonDelegate {
         CCDirector.sharedDirector().replaceScene(gameScene);
     }
     
-    func playButton() {
-        self.paused = !self.paused
+    func pauseButton() {
+        // Suspend / Resume Physics World (Contains Game, Excludes Ux)
+        physicsWorld.paused = !physicsWorld.paused
+        
+        // Hide/Show Ux Extras Node
+        uxHiddenLayer.visible = !uxHiddenLayer.visible
     }
     
+}
+
+// MARK:- Extend Physics
+extension CCPhysicsNode {
+    
+    func spawnCharacter() {
+        
+        let parentNode = self.parent as! GameScene
+        
+        // Spawn Disabled Check
+        if parentNode.canSpawn == false {
+            return
+        }
+        
+        // Random Character
+        var characterName: String?
+        
+        switch Int.random(min: 1, max: 3) {
+        case 1:
+             characterName = "Character Objects/TheCat"
+        case 2:
+            characterName = "Character Objects/ThePanda"
+        case 3:
+            characterName = "Character Objects/TheFrog"
+        default:
+            println("No Valid Character")
+            return
+        }
+        
+        var characterNode = CCBReader.load(characterName) as! Character
+        characterNode.position = parentNode.startPoint
+        addChild(characterNode)
+        
+        parentNode.characters.append(characterNode)
+    }
+    
+    func registerSchedules() {
+        self.schedule("spawnCharacter", interval: 2.0)
+    }
 }

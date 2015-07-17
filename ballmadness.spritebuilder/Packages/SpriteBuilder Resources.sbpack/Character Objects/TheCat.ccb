@@ -345,14 +345,25 @@
 						<array/>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 				<key>seqExpanded</key>
 				<true/>
 			</dict>
 		</array>
 		<key>customClass</key>
 		<string>CharacterCat</string>
+		<key>customProperties</key>
+		<array>
+			<dict>
+				<key>name</key>
+				<string>demoSpeed</string>
+				<key>optimized</key>
+				<false/>
+				<key>type</key>
+				<integer>1</integer>
+				<key>value</key>
+				<string>0.000000</string>
+			</dict>
+		</array>
 		<key>displayName</key>
 		<string>CCNode</string>
 		<key>memberVarAssignmentName</key>
@@ -421,6 +432,8 @@
 				</array>
 			</dict>
 		</array>
+		<key>selected</key>
+		<true/>
 	</dict>
 	<key>notes</key>
 	<array/>

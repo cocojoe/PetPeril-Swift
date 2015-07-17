@@ -4,18 +4,27 @@ class Character : CCNode {
     
     weak var body: CCSprite!
     var acceleration: CGPoint = ccp(5.0,0.0)
-    var maxVelocity: CGPoint  = ccp(25.0,35.0)
-    let equateStamp: Double = CACurrentMediaTime()
+    var maxVelocity:  CGPoint = ccp(25.0,35.0)
+    let equateStamp:  Double  = CACurrentMediaTime()
+    
+    // Overwrite Speed
+    var demoSpeed: CGFloat = 0
     
     func didLoadFromCCB() {
         body.physicsBody.mass = 0.1
+        body.physicsBody.collisionGroup = CCDirector.sharedDirector().physicsGroup
+        
+        // Presentation Usage
+        if demoSpeed > 0 {
+            maxVelocity.x = demoSpeed
+        }
     }
     
     override func update(delta: CCTime) {
         
         if body.physicsBody == nil { return }
         
-        if body.physicsBody.velocity.y >= -0.5 {
+        if body.physicsBody.velocity.y >= -1.0 {
             body.physicsBody.applyImpulse(acceleration)
             
             // Resume Walking Animation
@@ -26,14 +35,19 @@ class Character : CCNode {
         }
         
         
-        // Stop Backwards Movement
-        if body.physicsBody.velocity.x < 0 {
-            body.physicsBody.velocity.x = acceleration.x
-            body.physicsBody.applyImpulse(acceleration)
+        // Stop Backwards Movement (Left->Right)
+        if body.physicsBody.velocity.x < 0 && acceleration.x > 0 {
+           body.physicsBody.velocity.x = acceleration.x
+           body.physicsBody.applyImpulse(acceleration)
         }
         
-        // X Limiter
-        if body.physicsBody.velocity.x > maxVelocity.x {
+        // X Limiter (Left->Right)
+        if body.physicsBody.velocity.x > maxVelocity.x && acceleration.x > 0 {
+            body.physicsBody.velocity.x = maxVelocity.x
+        }
+        
+        // X Limiter (Right->Left)
+        if body.physicsBody.velocity.x < maxVelocity.x && acceleration.x < 0 {
             body.physicsBody.velocity.x = maxVelocity.x
         }
         
@@ -50,6 +64,19 @@ class Character : CCNode {
         body.physicsBody.type = .Static
         body.physicsBody.sensor = true
         body.physicsBody.collisionMask = []
+    }
+    
+    func reverse() {
+        
+        body.physicsBody.velocity = ccpMult(body.physicsBody.velocity,-1)
+        
+        // Flip Mode
+        maxVelocity = ccpMult(maxVelocity,-1)
+        acceleration = ccpMult(acceleration,-1)
+        
+        // Flip Sprite
+        body.flipX = !body.flipX
+        
     }
     
 }

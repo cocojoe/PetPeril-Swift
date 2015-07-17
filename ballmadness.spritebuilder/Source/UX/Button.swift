@@ -25,11 +25,11 @@ class Button : CCSprite {
     
     // MARK: - Touch Handlers
     override func touchBegan(touch: CCTouch!, withEvent event: CCTouchEvent!) {
-        
+       
         // Ensure No Duplicates
         if ignoreTouch == true { return }
         
-        // Block Touch while validating
+        // Block Subsequent Touches
         ignoreTouch = true
         
         // Action to Perform
@@ -40,9 +40,22 @@ class Button : CCSprite {
                 delegate?.retryButton?()
             case "exit":
                 delegate?.exitButton?()
+            case "pause":
+                delegate?.pauseButton?()
+                ignoreTouch = false     // Non Locking Button
         default:
-            println("No Action")
-            ignoreTouch = false // Resume Touch
+            println("Non Supported Action: \(action)")
+            return
+        }
+        
+        // Animate Button Pop
+        if attract == false {
+            let popSequence:CCActionSequence = CCActionSequence(array:
+                [CCActionScaleTo(duration: 0.10, scale: self.scale * 1.10),
+                    CCActionScaleTo(duration: 0.10, scale: self.scale)])
+            
+            // Pop
+            runAction(popSequence)
         }
     }
 }
@@ -52,4 +65,5 @@ class Button : CCSprite {
     optional func playButton()
     optional func retryButton()
     optional func exitButton()
+    optional func pauseButton()
 }
