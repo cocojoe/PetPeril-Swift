@@ -6,12 +6,12 @@ class Character : CCNode {
     var acceleration: CGPoint = ccp(5.0,0.0)
     var maxVelocity:  CGPoint = ccp(25.0,35.0)
     let equateStamp:  Double  = CACurrentMediaTime()
+    var drown: Bool = false
     
     // Overwrite Speed
     var demoSpeed: CGFloat = 0
     
     func didLoadFromCCB() {
-        body.physicsBody.mass = 0.1
         body.physicsBody.collisionGroup = CCDirector.sharedDirector().physicsGroup
         
         // Presentation Usage
@@ -24,7 +24,7 @@ class Character : CCNode {
         
         if body.physicsBody == nil { return }
         
-        if body.physicsBody.velocity.y >= -1.0 {
+        if body.physicsBody.velocity.y >= -2.0 {
             body.physicsBody.applyImpulse(acceleration)
             
             // Resume Walking Animation
@@ -77,6 +77,12 @@ class Character : CCNode {
         // Flip Sprite
         body.flipX = !body.flipX
         
+    }
+    
+    func isDrowning() {
+        drown = true
+        self.body.physicsBody.velocity.x = 0
+        self.unscheduleAllSelectors()
     }
     
 }

@@ -128,6 +128,51 @@
 			<key>scaleFrom</key>
 			<integer>1</integer>
 		</dict>
+		<key>Character Assets/Frog_10.png</key>
+		<dict>
+			<key>scaleFrom</key>
+			<integer>1</integer>
+		</dict>
+		<key>Character Assets/Frog_28.png</key>
+		<dict>
+			<key>scaleFrom</key>
+			<integer>1</integer>
+		</dict>
+		<key>Character Assets/Frog_3.png</key>
+		<dict>
+			<key>scaleFrom</key>
+			<integer>1</integer>
+		</dict>
+		<key>Character Assets/Frog_4.png</key>
+		<dict>
+			<key>scaleFrom</key>
+			<integer>1</integer>
+		</dict>
+		<key>Character Assets/Frog_5.png</key>
+		<dict>
+			<key>scaleFrom</key>
+			<integer>1</integer>
+		</dict>
+		<key>Character Assets/Frog_6.png</key>
+		<dict>
+			<key>scaleFrom</key>
+			<integer>1</integer>
+		</dict>
+		<key>Character Assets/Frog_7.png</key>
+		<dict>
+			<key>scaleFrom</key>
+			<integer>1</integer>
+		</dict>
+		<key>Character Assets/Frog_8.png</key>
+		<dict>
+			<key>scaleFrom</key>
+			<integer>1</integer>
+		</dict>
+		<key>Character Assets/Frog_9.png</key>
+		<dict>
+			<key>scaleFrom</key>
+			<integer>1</integer>
+		</dict>
 		<key>Character Assets/Panda_10.png</key>
 		<dict>
 			<key>scaleFrom</key>
@@ -226,10 +271,7 @@
 		<key>Sprites</key>
 		<dict/>
 		<key>World Mountain</key>
-		<dict>
-			<key>isSmartSpriteSheet</key>
-			<true/>
-		</dict>
+		<dict/>
 		<key>ccbResources</key>
 		<dict>
 			<key>previewFolderHidden</key>

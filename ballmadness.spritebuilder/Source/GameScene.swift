@@ -31,7 +31,7 @@ class GameScene : CCNode,CCPhysicsCollisionDelegate {
         // Physics Setup
         physicsWorld.collisionDelegate = self
         physicsWorld.debugDraw = false
-        //physicsWorld.space.damping = 0.90
+        physicsWorld.space.damping = 0.90
         
         // Create World
         initialiseWorld()
@@ -138,34 +138,6 @@ class GameScene : CCNode,CCPhysicsCollisionDelegate {
         return true
     }
     
-    /*
-    func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, character characterBody1: CCNode!, character characterBody2: CCNode!) -> Bool {
-        
-        // Destroy Character
-        var character1: Character = characterBody1.parent as! Character
-        var character2: Character = characterBody2.parent as! Character
-        
-        // The Bigger Consumes
-        if character1.body.scale >= character2.body.scale {
-            character1.body.scale += 0.25
-            
-            // Remove Character
-            physicsWorld.space.addPostStepBlock({
-                self.removeCharacter(character2)
-                }, key:character2)
-        } else {
-            character2.body.scale += 0.25
-            
-            // Remove Character
-            physicsWorld.space.addPostStepBlock({
-                self.removeCharacter(character1)
-                }, key:character1)
-        }
-        
-        return true
-    }
-    */
-    
     func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, character characterBody: CCNode!, characterGoal: Goal!) -> Bool {
         
         // Destroy Character
@@ -180,6 +152,48 @@ class GameScene : CCNode,CCPhysicsCollisionDelegate {
         
         return true
     }
+    
+    func ccPhysicsCollisionPreSolve(pair: CCPhysicsCollisionPair!, character characterBody: CCNode!, water: WaterNode!) -> Bool {
+        
+        // Character
+        var character: Character = characterBody.parent as! Character
+        
+        // Splash
+        water.applyBuoyancy(pair)
+        
+        if character.drown == true {
+            return false
+        } else {
+            //Character Position
+            let particlePosition = character.convertToWorldSpace(characterBody.position)
+            
+            // Load Particle
+            var particle: CCParticleSystem = CCParticleSystem(file: "water_particle.plist")
+            particle.position = particlePosition
+            self.addChild(particle)
+        }
+        
+        // Drown
+        for shape in character.body.physicsBody.body.shapes() {
+            
+            let accessShape = shape as! ChipmunkShape
+            accessShape.mass = 100
+        }
+        
+        character.isDrowning()
+    
+        return false
+    }
+    
+    
+    func ccPhysicsCollisionPreSolve(pair: CCPhysicsCollisionPair!, platform platformBody: CCNode!, water: WaterNode!) -> Bool {
+        
+        var platform: PlatformControl = platformBody.parent as! PlatformControl
+        water.applyBuoyancy(pair)
+        
+        return false
+    }
+
     
     func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, character characterBody: CCNode!, death deathBody: CCNode!) -> Bool {
         
@@ -221,9 +235,10 @@ class GameScene : CCNode,CCPhysicsCollisionDelegate {
         self.runAction(CCActionShake(duration: 0.25, amplitude: ccp(CGFloat.random(min:CGFloat(1),max:CGFloat(5)) , CGFloat.random(min:CGFloat(1),max: CGFloat(5))), dampening:true, shakes:0))
     }
     
-    // MARK: - Game Keeping
-    
     func killCharacter(character: Character) {
+        
+        // Visible
+        character.visible = true
         
         // Disable Physics
         character.disablePhysics()

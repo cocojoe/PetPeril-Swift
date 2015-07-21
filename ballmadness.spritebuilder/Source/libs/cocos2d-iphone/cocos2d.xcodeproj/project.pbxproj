@@ -111,6 +111,8 @@
 		57202D391970776100238D56 /* CCPlatformTextFieldAndroid.m in Sources */ = {isa = PBXBuildFile; fileRef = 571CD01D19649E03003D460C /* CCPlatformTextFieldAndroid.m */; };
 		577D72D11970AC59005ABDC0 /* CCPlatformTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 571CD01F19649E03003D460C /* CCPlatformTextField.m */; };
 		57BFF2BA1991937C00A3FE9C /* CCEditText.m in Sources */ = {isa = PBXBuildFile; fileRef = 57BFF2B81991937C00A3FE9C /* CCEditText.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		5B6EF4A71B5D94A5000ACE77 /* WaterNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B6EF4A51B5D94A5000ACE77 /* WaterNode.h */; };
+		5B6EF4A81B5D94A5000ACE77 /* WaterNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B6EF4A61B5D94A5000ACE77 /* WaterNode.m */; };
 		5BC1DE2A1A2E2099009C2E67 /* NSEvent+CC.h in Headers */ = {isa = PBXBuildFile; fileRef = 5BC1DE281A2E2099009C2E67 /* NSEvent+CC.h */; };
 		5BC1DE2B1A2E2099009C2E67 /* NSEvent+CC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC1DE291A2E2099009C2E67 /* NSEvent+CC.m */; };
 		5BC3CB5919626FA000C4F0D0 /* CCGestureListener.h in Headers */ = {isa = PBXBuildFile; fileRef = 5BC3CB5719626FA000C4F0D0 /* CCGestureListener.h */; };
@@ -1258,6 +1260,8 @@
 		571CD02519649E03003D460C /* CCPlatformTextFieldMac.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCPlatformTextFieldMac.m; sourceTree = "<group>"; };
 		57BFF2B71991937C00A3FE9C /* CCEditText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCEditText.h; path = java/CCEditText.h; sourceTree = "<group>"; };
 		57BFF2B81991937C00A3FE9C /* CCEditText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCEditText.m; path = java/CCEditText.m; sourceTree = "<group>"; };
+		5B6EF4A51B5D94A5000ACE77 /* WaterNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaterNode.h; sourceTree = "<group>"; };
+		5B6EF4A61B5D94A5000ACE77 /* WaterNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaterNode.m; sourceTree = "<group>"; };
 		5BC1DE281A2E2099009C2E67 /* NSEvent+CC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSEvent+CC.h"; sourceTree = "<group>"; };
 		5BC1DE291A2E2099009C2E67 /* NSEvent+CC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSEvent+CC.m"; sourceTree = "<group>"; };
 		5BC3CB5719626FA000C4F0D0 /* CCGestureListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCGestureListener.h; path = Android/CCGestureListener.h; sourceTree = "<group>"; };
@@ -2222,6 +2226,8 @@
 		D272031618FC897D00B100FF /* Effects */ = {
 			isa = PBXGroup;
 			children = (
+				5B6EF4A51B5D94A5000ACE77 /* WaterNode.h */,
+				5B6EF4A61B5D94A5000ACE77 /* WaterNode.m */,
 				D272031718FC89A000B100FF /* CCEffect_Private.h */,
 				D272031818FC89A000B100FF /* CCEffect.h */,
 				D272031918FC89A000B100FF /* CCEffect.m */,
@@ -2501,6 +2507,7 @@
 				D2DDB0A319805E8400233D80 /* CCVector2.h in Headers */,
 				B7E776211857A159004221AA /* CCColor.h in Headers */,
 				50E2A25210A46CC600D894CE /* CCProtocols.h in Headers */,
+				5B6EF4A71B5D94A5000ACE77 /* WaterNode.h in Headers */,
 				502C8BE010A661E200D137BA /* CCSpriteFrameCache.h in Headers */,
 				B79F905A17FE2A2E00908504 /* CCTableView.h in Headers */,
 				50E1357510ADEB1B00C9E7FA /* CCTexture.h in Headers */,
@@ -3333,6 +3340,7 @@
 				9D69E6D719DF604800C2749C /* CCLightNode.m in Sources */,
 				A003AC8F16572D6000C7B792 /* ccFPSImages.m in Sources */,
 				B79F905B17FE2A2E00908504 /* CCTableView.m in Sources */,
+				5B6EF4A81B5D94A5000ACE77 /* WaterNode.m in Sources */,
 				B74C2B9C17BDA63A00A829C0 /* CCSprite9Slice.m in Sources */,
 				B75C2E7D17C5908B002B0E0D /* NSAttributedString+CCAdditions.m in Sources */,
 				B7EE69E31819E75700B983FE /* CCLayoutBox.m in Sources */,

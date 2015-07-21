@@ -185,6 +185,9 @@
 #import "Support/uthash.h"
 #import "Support/utlist.h"
 
+// Effects
+#import "WaterNode.h"
+
 
 
 #ifdef __cplusplus

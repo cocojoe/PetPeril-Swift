@@ -15,6 +15,8 @@
 		5B1A7C891B51888900AE10CB /* DeathRotor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1A7C881B51888900AE10CB /* DeathRotor.swift */; };
 		5B4901371B4CC9FC0042811C /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4901361B4CC9FC0042811C /* GameScene.swift */; };
 		5B52C3F11B5814F400584496 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B52C3F01B5814F400584496 /* Constants.swift */; };
+		5B6EF4A11B5D93DC000ACE77 /* Water.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6EF49E1B5D93DC000ACE77 /* Water.swift */; };
+		5B6EF4AE1B5E0D57000ACE77 /* water_particle.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5B6EF4AD1B5E0D57000ACE77 /* water_particle.plist */; };
 		5BAEDF591B4F795F00DC18DF /* PlatformControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAEDF581B4F795F00DC18DF /* PlatformControl.swift */; };
 		5BAEDF601B4F8F0A00DC18DF /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAEDF5F1B4F8F0A00DC18DF /* Character.swift */; };
 		5BCD271B1B4CCD870003A13C /* Platform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCD271A1B4CCD870003A13C /* Platform.swift */; };
@@ -178,6 +180,8 @@
 		5B1A7C881B51888900AE10CB /* DeathRotor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeathRotor.swift; sourceTree = "<group>"; };
 		5B4901361B4CC9FC0042811C /* GameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameScene.swift; path = Source/GameScene.swift; sourceTree = "<group>"; };
 		5B52C3F01B5814F400584496 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		5B6EF49E1B5D93DC000ACE77 /* Water.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Water.swift; sourceTree = "<group>"; };
+		5B6EF4AD1B5E0D57000ACE77 /* water_particle.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = water_particle.plist; path = Particles/water_particle.plist; sourceTree = "<group>"; };
 		5BA4619E1974C88900785744 /* AndroidManifest.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = AndroidManifest.xml; path = Platforms/Android/AndroidManifest.xml; sourceTree = "<group>"; };
 		5BAEDF581B4F795F00DC18DF /* PlatformControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlatformControl.swift; path = Source/Avatars/PlatformControl.swift; sourceTree = "<group>"; };
 		5BAEDF5F1B4F8F0A00DC18DF /* Character.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
@@ -361,6 +365,15 @@
 			path = Source/Generic;
 			sourceTree = "<group>";
 		};
+		5B6EF49D1B5D93DC000ACE77 /* SpecialFX */ = {
+			isa = PBXGroup;
+			children = (
+				5B6EF49E1B5D93DC000ACE77 /* Water.swift */,
+			);
+			name = SpecialFX;
+			path = Source/SpecialFX;
+			sourceTree = "<group>";
+		};
 		5BAEDF5E1B4F8F0A00DC18DF /* Characters */ = {
 			isa = PBXGroup;
 			children = (
@@ -530,6 +543,7 @@
 		B737893C1807616C0076A88C /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				5B6EF49D1B5D93DC000ACE77 /* SpecialFX */,
 				5BD6B8461B55B8CF00C36F19 /* UX */,
 				5B1A7C7F1B517F5B00AE10CB /* Generic */,
 				7A40362219DDF090007B6E8F /* Android */,
@@ -615,6 +629,7 @@
 		B77F1B4617B978D7009739AE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				5B6EF4AD1B5E0D57000ACE77 /* water_particle.plist */,
 				5BF3E1551B54F6ED00C4634A /* Launch Images */,
 				7A40366119DDF8C2007B6E8F /* Platforms */,
 				5B12100D197483EE004C1E1D /* res */,
@@ -817,6 +832,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B6EF4AE1B5E0D57000ACE77 /* water_particle.plist in Resources */,
 				B71F5919188484E7003F4D28 /* Settings.png in Resources */,
 				B71F5914188484E7003F4D28 /* iPad@2x.png in Resources */,
 				5BF3E1641B54F6ED00C4634A /* Default-Landscape@2x.png in Resources */,
@@ -910,6 +926,7 @@
 				5B1A7C811B517F5B00AE10CB /* Sensor.swift in Sources */,
 				5B4901371B4CC9FC0042811C /* GameScene.swift in Sources */,
 				5B1A7C871B51881F00AE10CB /* Death.swift in Sources */,
+				5B6EF4A11B5D93DC000ACE77 /* Water.swift in Sources */,
 				5BAEDF591B4F795F00DC18DF /* PlatformControl.swift in Sources */,
 				5B121038197487F2004C1E1D /* AppDelegate.m in Sources */,
 				5BDF710D1B56DF090008E6C7 /* CharacterCat.swift in Sources */,
