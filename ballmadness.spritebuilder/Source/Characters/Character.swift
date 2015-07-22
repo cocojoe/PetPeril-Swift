@@ -7,6 +7,7 @@ class Character : CCNode {
     var maxVelocity:  CGPoint = ccp(25.0,35.0)
     let equateStamp:  Double  = CACurrentMediaTime()
     var drown: Bool = false
+    var nodesTouching: Int = 0
     
     // Overwrite Speed
     var demoSpeed: CGFloat = 0
@@ -25,7 +26,7 @@ class Character : CCNode {
         if body.physicsBody == nil { return }
         
         if body.physicsBody.velocity.y >= -2.0 {
-            body.physicsBody.applyImpulse(acceleration)
+            //body.physicsBody.applyImpulse(acceleration)
             
             // Resume Walking Animation
             body.animationManager.paused = false

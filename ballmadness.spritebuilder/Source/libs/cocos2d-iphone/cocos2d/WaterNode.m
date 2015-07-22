@@ -122,7 +122,12 @@ k_scalar_body(cpBody *body, cpVect point, cpVect n)
 	cpShape *poly = floaterShape.shape.shape;
 	
 	cpBody *body = cpShapeGetBody(poly);
+    
+    cpFloat dt = cpSpaceGetCurrentTimeStep(_space);
+    cpVect g = cpSpaceGetGravity(_space);
+
 	
+    /*
 	// Clip the polygon against the fluid level
 	int count = cpPolyShapeGetCount(poly);
 	int clippedCount = 0;
@@ -183,10 +188,11 @@ k_scalar_body(cpBody *body, cpVect point, cpVect n)
 		cpShapeSegmentQuery(poly, left, right, 0.0, &infoL) &&
 		cpShapeSegmentQuery(poly, right, left, 0.0, &infoR)
 	){
+    */
 		float nodeToIndex = (float)_surfaceCount/_contentSize.width/2.0f;
-		float center = (infoL.point.x + infoR.point.x)*nodeToIndex;
-		float radius = (infoR.point.x - infoL.point.x)*nodeToIndex;
-		float dY = dt*cpBodyGetVelocity(body).y*6.0;
+		float center = cpBodyGetPosition(body).x*2.2 *nodeToIndex;
+		float radius = 20 *nodeToIndex;
+		float dY = dt*-cpBodyGetVelocity(body).y*6.0;
 		
 		float rigidEffect = 0.05;
 		float lerpCoef = 1.0f - cpfpow(rigidEffect, dt);
@@ -197,7 +203,7 @@ k_scalar_body(cpBody *body, cpVect point, cpVect n)
 			float prevSurface = _prevSurface[i];
 			_surface[i] = cpflerp(_surface[i] - prevSurface, dY, blend*lerpCoef) + prevSurface;
 		}
-	}
+	//}
 }
 
 static inline float

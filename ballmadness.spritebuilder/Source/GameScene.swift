@@ -127,6 +127,8 @@ class GameScene : CCNode,CCPhysicsCollisionDelegate {
         var character: Character = characterBody.parent as! Character
         var platform: PlatformControl = platformBody.parent as! PlatformControl
         
+        character.nodesTouching++
+        
         return true
     }
     
@@ -134,6 +136,8 @@ class GameScene : CCNode,CCPhysicsCollisionDelegate {
         
         var character: Character = characterBody.parent as! Character
         var platform: PlatformControl = platformBody.parent as! PlatformControl
+        
+        character.nodesTouching--
         
         return true
     }
@@ -170,6 +174,7 @@ class GameScene : CCNode,CCPhysicsCollisionDelegate {
             // Load Particle
             var particle: CCParticleSystem = CCParticleSystem(file: "water_particle.plist")
             particle.position = particlePosition
+            particle.autoRemoveOnFinish = true
             self.addChild(particle)
         }
         
@@ -186,10 +191,19 @@ class GameScene : CCNode,CCPhysicsCollisionDelegate {
     }
     
     
-    func ccPhysicsCollisionPreSolve(pair: CCPhysicsCollisionPair!, platform platformBody: CCNode!, water: WaterNode!) -> Bool {
+    func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, platform platformBody: CCNode!, water: WaterNode!) -> Bool {
         
         var platform: PlatformControl = platformBody.parent as! PlatformControl
         water.applyBuoyancy(pair)
+        
+        //Character Position
+        let particlePosition = platform.convertToWorldSpace(platformBody.position)
+        
+        // Load Particle
+        var particle: CCParticleSystem = CCParticleSystem(file: "water_particle.plist")
+        particle.position = particlePosition
+        particle.autoRemoveOnFinish = true
+        self.addChild(particle)
         
         return false
     }

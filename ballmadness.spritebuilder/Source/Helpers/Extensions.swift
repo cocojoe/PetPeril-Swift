@@ -124,7 +124,7 @@ extension CCNode:ButtonDelegate {
         for childNode in node.children as! [CCNode] {
                 
                 // Enable Control for Tagged Platforms
-                if childNode.name == "button" {
+                if childNode is Button {
                     
                     var buttonNode = childNode as! Button
                     buttonNode.delegate = self

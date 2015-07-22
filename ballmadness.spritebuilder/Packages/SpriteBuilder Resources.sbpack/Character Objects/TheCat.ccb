@@ -221,7 +221,7 @@
 					<key>allowsRotation</key>
 					<false/>
 					<key>bodyShape</key>
-					<integer>0</integer>
+					<integer>1</integer>
 					<key>collisionCategories</key>
 					<array/>
 					<key>collisionMask</key>
@@ -229,7 +229,7 @@
 					<key>collisionType</key>
 					<string>character</string>
 					<key>cornerRadius</key>
-					<real>0.0</real>
+					<real>9.8883390426635742</real>
 					<key>density</key>
 					<real>0.10000000149011612</real>
 					<key>dynamic</key>
@@ -241,85 +241,12 @@
 					<key>points</key>
 					<array>
 						<array>
-							<real>2.450526237487793</real>
-							<real>0.21346296370029449</real>
-						</array>
-						<array>
-							<real>1.8832017183303833</real>
-							<real>10.387336730957031</real>
-						</array>
-						<array>
-							<real>6.4275274276733398</real>
-							<real>11.095775604248047</real>
-						</array>
-						<array>
-							<real>7.097285270690918</real>
-							<real>18.928720474243164</real>
-						</array>
-						<array>
-							<real>20.559778213500977</real>
-							<real>19.119977951049805</real>
-						</array>
-						<array>
-							<real>20.511785507202148</real>
-							<real>6.7985806465148926</real>
-						</array>
-						<array>
-							<real>16.252553939819336</real>
-							<real>5.284998893737793</real>
-						</array>
-						<array>
-							<real>17.151533126831055</real>
-							<real>0.27721533179283142</real>
+							<real>10</real>
+							<real>10</real>
 						</array>
 					</array>
 					<key>polygons</key>
-					<array>
-						<array>
-							<array>
-								<real>6.4275274276733398</real>
-								<real>11.095775604248047</real>
-							</array>
-							<array>
-								<real>1.8832017183303833</real>
-								<real>10.387336730957031</real>
-							</array>
-							<array>
-								<real>2.450526237487793</real>
-								<real>0.21346296370029449</real>
-							</array>
-							<array>
-								<real>17.151533126831055</real>
-								<real>0.27721533179283142</real>
-							</array>
-							<array>
-								<real>16.252553939819336</real>
-								<real>5.284998893737793</real>
-							</array>
-						</array>
-						<array>
-							<array>
-								<real>16.252553939819336</real>
-								<real>5.284998893737793</real>
-							</array>
-							<array>
-								<real>20.511785507202148</real>
-								<real>6.7985806465148926</real>
-							</array>
-							<array>
-								<real>20.559778213500977</real>
-								<real>19.119977951049805</real>
-							</array>
-							<array>
-								<real>7.097285270690918</real>
-								<real>18.928720474243164</real>
-							</array>
-							<array>
-								<real>6.4275274276733398</real>
-								<real>11.095775604248047</real>
-							</array>
-						</array>
-					</array>
+					<array/>
 				</dict>
 				<key>properties</key>
 				<array>
