@@ -10,7 +10,7 @@
 		<false/>
 	</dict>
 	<key>UUID</key>
-	<integer>784</integer>
+	<integer>836</integer>
 	<key>centeredOrigin</key>
 	<false/>
 	<key>currentResolution</key>
@@ -581,11 +581,11 @@
 							</dict>
 						</array>
 						<key>customClass</key>
-						<string></string>
+						<string>WorldNode</string>
 						<key>displayName</key>
 						<string>Level 3 Effect Node</string>
 						<key>memberVarAssignmentName</key>
-						<string></string>
+						<string>worldNode3</string>
 						<key>memberVarAssignmentType</key>
 						<integer>1</integer>
 						<key>properties</key>
@@ -682,6 +682,37 @@
 					<dict>
 						<key>UUID</key>
 						<integer>90</integer>
+						<key>animatedProperties</key>
+						<dict>
+							<key>0</key>
+							<dict>
+								<key>rotation</key>
+								<dict>
+									<key>keyframes</key>
+									<array>
+										<dict>
+											<key>easing</key>
+											<dict>
+												<key>type</key>
+												<integer>1</integer>
+											</dict>
+											<key>name</key>
+											<string>rotation</string>
+											<key>time</key>
+											<real>4</real>
+											<key>type</key>
+											<integer>2</integer>
+											<key>value</key>
+											<real>0.0</real>
+										</dict>
+									</array>
+									<key>name</key>
+									<string>rotation</string>
+									<key>type</key>
+									<integer>2</integer>
+								</dict>
+							</dict>
+						</dict>
 						<key>baseClass</key>
 						<string>CCEffectNode</string>
 						<key>children</key>
@@ -937,11 +968,11 @@
 							</dict>
 						</array>
 						<key>customClass</key>
-						<string></string>
+						<string>WorldNode</string>
 						<key>displayName</key>
 						<string>Level 2 Effect Node</string>
 						<key>memberVarAssignmentName</key>
-						<string></string>
+						<string>worldNode2</string>
 						<key>memberVarAssignmentType</key>
 						<integer>1</integer>
 						<key>properties</key>
@@ -1006,6 +1037,16 @@
 								</array>
 							</dict>
 							<dict>
+								<key>baseValue</key>
+								<real>0.0</real>
+								<key>name</key>
+								<string>rotation</string>
+								<key>type</key>
+								<string>Degrees</string>
+								<key>value</key>
+								<real>0.0</real>
+							</dict>
+							<dict>
 								<key>name</key>
 								<string>effects</string>
 								<key>type</key>
@@ -1034,10 +1075,43 @@
 								</array>
 							</dict>
 						</array>
+						<key>seqExpanded</key>
+						<true/>
 					</dict>
 					<dict>
 						<key>UUID</key>
 						<integer>69</integer>
+						<key>animatedProperties</key>
+						<dict>
+							<key>0</key>
+							<dict>
+								<key>rotation</key>
+								<dict>
+									<key>keyframes</key>
+									<array>
+										<dict>
+											<key>easing</key>
+											<dict>
+												<key>type</key>
+												<integer>1</integer>
+											</dict>
+											<key>name</key>
+											<string>rotation</string>
+											<key>time</key>
+											<real>4</real>
+											<key>type</key>
+											<integer>2</integer>
+											<key>value</key>
+											<real>0.0</real>
+										</dict>
+									</array>
+									<key>name</key>
+									<string>rotation</string>
+									<key>type</key>
+									<integer>2</integer>
+								</dict>
+							</dict>
+						</dict>
 						<key>baseClass</key>
 						<string>CCEffectNode</string>
 						<key>children</key>
@@ -1613,11 +1687,11 @@
 							</dict>
 						</array>
 						<key>customClass</key>
-						<string></string>
+						<string>WorldNode</string>
 						<key>displayName</key>
 						<string>Level 1 Effect Node</string>
 						<key>memberVarAssignmentName</key>
-						<string></string>
+						<string>worldNode1</string>
 						<key>memberVarAssignmentType</key>
 						<integer>1</integer>
 						<key>properties</key>
@@ -1682,6 +1756,16 @@
 								</array>
 							</dict>
 							<dict>
+								<key>baseValue</key>
+								<real>0.0</real>
+								<key>name</key>
+								<string>rotation</string>
+								<key>type</key>
+								<string>Degrees</string>
+								<key>value</key>
+								<real>0.0</real>
+							</dict>
+							<dict>
 								<key>name</key>
 								<string>effects</string>
 								<key>type</key>
@@ -1710,6 +1794,8 @@
 								</array>
 							</dict>
 						</array>
+						<key>seqExpanded</key>
+						<true/>
 					</dict>
 					<dict>
 						<key>UUID</key>
@@ -1750,8 +1836,8 @@
 										<string>Position</string>
 										<key>value</key>
 										<array>
-											<real>37</real>
-											<real>47</real>
+											<real>41.003753662109375</real>
+											<real>31</real>
 											<integer>0</integer>
 											<integer>0</integer>
 											<integer>0</integer>
@@ -1859,7 +1945,7 @@
 										<key>value</key>
 										<array>
 											<real>41.003753662109375</real>
-											<real>73.006683349609375</real>
+											<real>57.006683349609375</real>
 											<integer>0</integer>
 											<integer>0</integer>
 											<integer>0</integer>
@@ -1985,7 +2071,7 @@
 										<key>value</key>
 										<array>
 											<real>25.003753662109375</real>
-											<real>53.006683349609375</real>
+											<real>37</real>
 											<integer>0</integer>
 											<integer>0</integer>
 											<integer>0</integer>
@@ -2046,8 +2132,8 @@
 										<string>Position</string>
 										<key>value</key>
 										<array>
-											<real>71.582878112792969</real>
-											<real>62.453624725341797</real>
+											<real>70.003753662109375</real>
+											<real>50</real>
 											<integer>0</integer>
 											<integer>0</integer>
 											<integer>0</integer>
@@ -2075,8 +2161,6 @@
 										<string>Generic Objects/Bounce.ccb</string>
 									</dict>
 								</array>
-								<key>selected</key>
-								<true/>
 							</dict>
 							<dict>
 								<key>UUID</key>
@@ -2110,8 +2194,8 @@
 										<string>Position</string>
 										<key>value</key>
 										<array>
-											<real>0.99017715454101562</real>
-											<real>61.453624725341797</real>
+											<real>7.9901771545410156</real>
+											<real>50</real>
 											<integer>0</integer>
 											<integer>0</integer>
 											<integer>0</integer>
@@ -2142,11 +2226,11 @@
 							</dict>
 						</array>
 						<key>customClass</key>
-						<string></string>
+						<string>WorldNode</string>
 						<key>displayName</key>
 						<string>Free Group</string>
 						<key>memberVarAssignmentName</key>
-						<string></string>
+						<string>worldNode</string>
 						<key>memberVarAssignmentType</key>
 						<integer>1</integer>
 						<key>properties</key>
@@ -2166,8 +2250,8 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>7.000640869140625</real>
-									<real>-2</real>
+									<real>4.00054931640625</real>
+									<real>12.5</real>
 									<integer>0</integer>
 									<integer>0</integer>
 									<integer>0</integer>
@@ -2180,8 +2264,8 @@
 								<string>Size</string>
 								<key>value</key>
 								<array>
-									<real>0.0</real>
-									<real>0.0</real>
+									<real>75</real>
+									<real>70</real>
 									<integer>0</integer>
 									<integer>0</integer>
 								</array>
@@ -2239,7 +2323,7 @@
 						<key>value</key>
 						<array>
 							<real>0.0</real>
-							<real>0.0</real>
+							<real>-1</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -2302,6 +2386,8 @@
 						<real>0.5</real>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 		</array>
 		<key>customClass</key>

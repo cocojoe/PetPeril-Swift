@@ -18,6 +18,7 @@
 		5B6EF4A11B5D93DC000ACE77 /* Water.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6EF49E1B5D93DC000ACE77 /* Water.swift */; };
 		5B6EF4AE1B5E0D57000ACE77 /* water_particle.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5B6EF4AD1B5E0D57000ACE77 /* water_particle.plist */; };
 		5BA8F6D81B606DAD003A03EE /* Spawn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA8F6D71B606DAD003A03EE /* Spawn.swift */; };
+		5BA8F6DC1B607033003A03EE /* WorldNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA8F6DB1B607033003A03EE /* WorldNode.swift */; };
 		5BAEDF591B4F795F00DC18DF /* PlatformControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAEDF581B4F795F00DC18DF /* PlatformControl.swift */; };
 		5BAEDF601B4F8F0A00DC18DF /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAEDF5F1B4F8F0A00DC18DF /* Character.swift */; };
 		5BCD271B1B4CCD870003A13C /* Platform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCD271A1B4CCD870003A13C /* Platform.swift */; };
@@ -185,6 +186,7 @@
 		5B6EF4AD1B5E0D57000ACE77 /* water_particle.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = water_particle.plist; path = Particles/water_particle.plist; sourceTree = "<group>"; };
 		5BA4619E1974C88900785744 /* AndroidManifest.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = AndroidManifest.xml; path = Platforms/Android/AndroidManifest.xml; sourceTree = "<group>"; };
 		5BA8F6D71B606DAD003A03EE /* Spawn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spawn.swift; sourceTree = "<group>"; };
+		5BA8F6DB1B607033003A03EE /* WorldNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorldNode.swift; sourceTree = "<group>"; };
 		5BAEDF581B4F795F00DC18DF /* PlatformControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlatformControl.swift; path = Source/Avatars/PlatformControl.swift; sourceTree = "<group>"; };
 		5BAEDF5F1B4F8F0A00DC18DF /* Character.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		5BCD271A1B4CCD870003A13C /* Platform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Platform.swift; path = Source/Avatars/Platform.swift; sourceTree = "<group>"; };
@@ -371,6 +373,7 @@
 		5B6EF49D1B5D93DC000ACE77 /* SpecialFX */ = {
 			isa = PBXGroup;
 			children = (
+				5BA8F6DB1B607033003A03EE /* WorldNode.swift */,
 				5B6EF49E1B5D93DC000ACE77 /* Water.swift */,
 			);
 			name = SpecialFX;
@@ -929,6 +932,7 @@
 				7A046D7919E84ED5004C4763 /* MainScene.swift in Sources */,
 				5B1A7C811B517F5B00AE10CB /* Sensor.swift in Sources */,
 				5B4901371B4CC9FC0042811C /* GameScene.swift in Sources */,
+				5BA8F6DC1B607033003A03EE /* WorldNode.swift in Sources */,
 				5B1A7C871B51881F00AE10CB /* Death.swift in Sources */,
 				5B6EF4A11B5D93DC000ACE77 /* Water.swift in Sources */,
 				5BAEDF591B4F795F00DC18DF /* PlatformControl.swift in Sources */,

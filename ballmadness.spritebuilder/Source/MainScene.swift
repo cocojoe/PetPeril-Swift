@@ -7,6 +7,10 @@ import Foundation
 class MainScene: CCNode, CCPhysicsCollisionDelegate {
     
     weak var physicsWorld: CCPhysicsNode!
+    weak var worldNode: WorldNode!
+    weak var worldNode1: WorldNode!
+    weak var worldNode2: WorldNode!
+    weak var worldNode3: WorldNode!
     
     func didLoadFromCCB() {
         
