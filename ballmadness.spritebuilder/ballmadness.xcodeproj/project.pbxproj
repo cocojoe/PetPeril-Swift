@@ -17,6 +17,7 @@
 		5B52C3F11B5814F400584496 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B52C3F01B5814F400584496 /* Constants.swift */; };
 		5B6EF4A11B5D93DC000ACE77 /* Water.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6EF49E1B5D93DC000ACE77 /* Water.swift */; };
 		5B6EF4AE1B5E0D57000ACE77 /* water_particle.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5B6EF4AD1B5E0D57000ACE77 /* water_particle.plist */; };
+		5BA8F6D81B606DAD003A03EE /* Spawn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA8F6D71B606DAD003A03EE /* Spawn.swift */; };
 		5BAEDF591B4F795F00DC18DF /* PlatformControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAEDF581B4F795F00DC18DF /* PlatformControl.swift */; };
 		5BAEDF601B4F8F0A00DC18DF /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAEDF5F1B4F8F0A00DC18DF /* Character.swift */; };
 		5BCD271B1B4CCD870003A13C /* Platform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCD271A1B4CCD870003A13C /* Platform.swift */; };
@@ -183,6 +184,7 @@
 		5B6EF49E1B5D93DC000ACE77 /* Water.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Water.swift; sourceTree = "<group>"; };
 		5B6EF4AD1B5E0D57000ACE77 /* water_particle.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = water_particle.plist; path = Particles/water_particle.plist; sourceTree = "<group>"; };
 		5BA4619E1974C88900785744 /* AndroidManifest.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = AndroidManifest.xml; path = Platforms/Android/AndroidManifest.xml; sourceTree = "<group>"; };
+		5BA8F6D71B606DAD003A03EE /* Spawn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spawn.swift; sourceTree = "<group>"; };
 		5BAEDF581B4F795F00DC18DF /* PlatformControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlatformControl.swift; path = Source/Avatars/PlatformControl.swift; sourceTree = "<group>"; };
 		5BAEDF5F1B4F8F0A00DC18DF /* Character.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		5BCD271A1B4CCD870003A13C /* Platform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Platform.swift; path = Source/Avatars/Platform.swift; sourceTree = "<group>"; };
@@ -357,6 +359,7 @@
 		5B1A7C7F1B517F5B00AE10CB /* Generic */ = {
 			isa = PBXGroup;
 			children = (
+				5BA8F6D71B606DAD003A03EE /* Spawn.swift */,
 				5BE4A2621B57747D007F9F82 /* Bounce.swift */,
 				5B1A7C841B5180D200AE10CB /* Goal.swift */,
 				5B1A7C801B517F5B00AE10CB /* Sensor.swift */,
@@ -922,6 +925,7 @@
 				5BCD27231B4CDE8F0003A13C /* Extensions.swift in Sources */,
 				B73789871807631A0076A88C /* main.m in Sources */,
 				5B1A7C891B51888900AE10CB /* DeathRotor.swift in Sources */,
+				5BA8F6D81B606DAD003A03EE /* Spawn.swift in Sources */,
 				7A046D7919E84ED5004C4763 /* MainScene.swift in Sources */,
 				5B1A7C811B517F5B00AE10CB /* Sensor.swift in Sources */,
 				5B4901371B4CC9FC0042811C /* GameScene.swift in Sources */,

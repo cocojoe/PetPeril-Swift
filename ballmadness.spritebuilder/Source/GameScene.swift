@@ -14,10 +14,12 @@ class GameScene : CCNode,CCPhysicsCollisionDelegate {
     
     // Level Loading
     weak var levelLoader: CCNode!
-    var canSpawn = true
     
-    // Important Points
-    var startPoint: CGPoint = CGPointZero
+    // Essential Infrmation
+    var spawnPoint: CGPoint = CGPointZero
+    
+    // Block Excessive Spawn
+    var canSpawn = true
     
     // UX Node(s)
     weak var uxHiddenLayer: CCNode!
@@ -51,7 +53,7 @@ class GameScene : CCNode,CCPhysicsCollisionDelegate {
     func initialiseWorld() {
         
         // Load Level
-        let levelNode = CCBReader.load("Mountain Levels/Level1")
+        let levelNode = CCBReader.load("Mountain Levels/Level2")
         levelLoader.addChild(levelNode)
         
         for childNode in levelNode.children as! [CCNode] {
@@ -65,9 +67,9 @@ class GameScene : CCNode,CCPhysicsCollisionDelegate {
                 mechanical.append(platformNode)
             }
             
-            // Grab Start Point
-            if childNode.name == "startPoint" {
-                startPoint = childNode.position
+            // Grab Spawn Point
+            if childNode is Spawn {
+                spawnPoint = childNode.position
                 childNode.visible = false
             }
         }
@@ -353,7 +355,7 @@ extension CCPhysicsNode {
         }
         
         var characterNode = CCBReader.load(characterName) as! Character
-        characterNode.position = parentNode.startPoint
+        characterNode.position = parentNode.spawnPoint
         addChild(characterNode)
         
         parentNode.characters.append(characterNode)

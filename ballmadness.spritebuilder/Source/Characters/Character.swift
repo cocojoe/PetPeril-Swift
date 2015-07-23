@@ -25,8 +25,10 @@ class Character : CCNode {
         
         if body.physicsBody == nil { return }
         
+        // Demo Mode
+        if demoSpeed > 0 { body.physicsBody.applyImpulse(acceleration) }
+        
         if body.physicsBody.velocity.y >= -2.0 {
-            //body.physicsBody.applyImpulse(acceleration)
             
             // Resume Walking Animation
             body.animationManager.paused = false
