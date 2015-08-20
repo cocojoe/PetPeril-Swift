@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B77F1B2D17B978D7009739AE"
-               BuildableName = "ballmadness.app"
-               BlueprintName = "ballmadness iOS"
-               ReferencedContainer = "container:ballmadness.xcodeproj">
+               BlueprintIdentifier = "927F6198196C771E000F43EF"
+               BuildableName = "petperil Android.app"
+               BlueprintName = "petperil Android"
+               ReferencedContainer = "container:petperil.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,10 +32,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B77F1B2D17B978D7009739AE"
-            BuildableName = "ballmadness.app"
-            BlueprintName = "ballmadness iOS"
-            ReferencedContainer = "container:ballmadness.xcodeproj">
+            BlueprintIdentifier = "927F6198196C771E000F43EF"
+            BuildableName = "petperil Android.app"
+            BlueprintName = "petperil Android"
+            ReferencedContainer = "container:petperil.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -48,13 +48,14 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B77F1B2D17B978D7009739AE"
-            BuildableName = "ballmadness.app"
-            BlueprintName = "ballmadness iOS"
-            ReferencedContainer = "container:ballmadness.xcodeproj">
+            BlueprintIdentifier = "927F6198196C771E000F43EF"
+            BuildableName = "petperil Android.app"
+            BlueprintName = "petperil Android"
+            ReferencedContainer = "container:petperil.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -66,13 +67,14 @@
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B77F1B2D17B978D7009739AE"
-            BuildableName = "ballmadness.app"
-            BlueprintName = "ballmadness iOS"
-            ReferencedContainer = "container:ballmadness.xcodeproj">
+            BlueprintIdentifier = "927F6198196C771E000F43EF"
+            BuildableName = "petperil Android.app"
+            BlueprintName = "petperil Android"
+            ReferencedContainer = "container:petperil.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
