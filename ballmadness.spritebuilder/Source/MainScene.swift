@@ -26,7 +26,7 @@ class MainScene: CCNode, CCPhysicsCollisionDelegate {
     func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, character characterBody: CCNode!, characterBounce: Bounce!) -> Bool {
         
         // Character
-        var character: Character = characterBody.parent as! Character
+        let character: Character = characterBody.parent as! Character
         character.reverse()
         
         return true
@@ -35,10 +35,10 @@ class MainScene: CCNode, CCPhysicsCollisionDelegate {
 }
 
 // MARK:- UX Delegate
-extension MainScene: ButtonDelegate {
+extension MainScene {
     
     func playButton() {
-        var gameScene: CCScene = CCBReader.loadAsScene("GameScene")
+        let gameScene: CCScene = CCBReader.loadAsScene("GameScene")
         CCDirector.sharedDirector().replaceScene(gameScene);
     }
     

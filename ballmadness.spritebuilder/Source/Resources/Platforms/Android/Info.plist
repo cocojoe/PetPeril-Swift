@@ -9,7 +9,7 @@
 	<key>CFBundleExecutable</key>
 	<string>ballmadness</string>
 	<key>CFBundleIdentifier</key>
-	<string>org.cocos2d.ballmadness</string>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>

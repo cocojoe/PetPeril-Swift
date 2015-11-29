@@ -44,7 +44,7 @@ class Button : CCSprite {
                 delegate?.pauseButton?()
                 ignoreTouch = false     // Non Locking Button
         default:
-            println("Non Supported Action: \(action)")
+            print("Non Supported Action: \(action)")
             return
         }
         

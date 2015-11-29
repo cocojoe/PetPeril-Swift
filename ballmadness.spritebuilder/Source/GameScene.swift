@@ -61,7 +61,7 @@ class GameScene : CCNode,CCPhysicsCollisionDelegate {
             // Enable Control for Tagged Platforms
             if childNode.name == "control" {
                 
-                var platformNode = childNode as! PlatformControl
+                let platformNode = childNode as! PlatformControl
                 platformNode.setup()
                 
                 mechanical.append(platformNode)
@@ -118,7 +118,7 @@ class GameScene : CCNode,CCPhysicsCollisionDelegate {
     
     func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, characterSoftDeath: Sensor!, character characterBody: CCNode!) -> Bool {
         
-        var character: Character = characterBody.parent as! Character
+        let character: Character = characterBody.parent as! Character
         killCharacter(character)
         
         return false
@@ -126,7 +126,7 @@ class GameScene : CCNode,CCPhysicsCollisionDelegate {
     
     func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, platform platformBody: CCNode!, character characterBody: CCNode!) -> Bool {
         
-        var character: Character = characterBody.parent as! Character
+        let character: Character = characterBody.parent as! Character
         var platform: PlatformControl = platformBody.parent as! PlatformControl
         
         character.nodesTouching++
@@ -136,7 +136,7 @@ class GameScene : CCNode,CCPhysicsCollisionDelegate {
     
     func ccPhysicsCollisionSeparate(pair: CCPhysicsCollisionPair!, platform platformBody: CCNode!, character characterBody: CCNode!) -> Bool {
         
-        var character: Character = characterBody.parent as! Character
+        let character: Character = characterBody.parent as! Character
         var platform: PlatformControl = platformBody.parent as! PlatformControl
         
         character.nodesTouching--
@@ -147,7 +147,7 @@ class GameScene : CCNode,CCPhysicsCollisionDelegate {
     func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, character characterBody: CCNode!, characterGoal: Goal!) -> Bool {
         
         // Destroy Character
-        var character: Character = characterBody.parent as! Character
+        let character: Character = characterBody.parent as! Character
         
         // Remove Character
         physicsWorld.space.addPostStepBlock({
@@ -162,7 +162,7 @@ class GameScene : CCNode,CCPhysicsCollisionDelegate {
     func ccPhysicsCollisionPreSolve(pair: CCPhysicsCollisionPair!, character characterBody: CCNode!, water: WaterNode!) -> Bool {
         
         // Character
-        var character: Character = characterBody.parent as! Character
+        let character: Character = characterBody.parent as! Character
         
         // Splash
         water.applyBuoyancy(pair)
@@ -174,7 +174,7 @@ class GameScene : CCNode,CCPhysicsCollisionDelegate {
             let particlePosition = character.convertToWorldSpace(characterBody.position)
             
             // Load Particle
-            var particle: CCParticleSystem = CCParticleSystem(file: "water_particle.plist")
+            let particle: CCParticleSystem = CCParticleSystem(file: "water_particle.plist")
             particle.position = particlePosition
             particle.autoRemoveOnFinish = true
             self.addChild(particle)
@@ -195,14 +195,14 @@ class GameScene : CCNode,CCPhysicsCollisionDelegate {
     
     func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, platform platformBody: CCNode!, water: WaterNode!) -> Bool {
         
-        var platform: PlatformControl = platformBody.parent as! PlatformControl
+        let platform: PlatformControl = platformBody.parent as! PlatformControl
         water.applyBuoyancy(pair)
         
         //Character Position
         let particlePosition = platform.convertToWorldSpace(platformBody.position)
         
         // Load Particle
-        var particle: CCParticleSystem = CCParticleSystem(file: "water_particle.plist")
+        let particle: CCParticleSystem = CCParticleSystem(file: "water_particle.plist")
         particle.position = particlePosition
         particle.autoRemoveOnFinish = true
         self.addChild(particle)
@@ -214,7 +214,7 @@ class GameScene : CCNode,CCPhysicsCollisionDelegate {
     func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, character characterBody: CCNode!, death deathBody: CCNode!) -> Bool {
         
         // Destroy Character
-        var character: Character = characterBody.parent as! Character
+        let character: Character = characterBody.parent as! Character
         var death: Death = deathBody.parent as! Death
         
         // Add Effects
@@ -275,7 +275,7 @@ class GameScene : CCNode,CCPhysicsCollisionDelegate {
     
     func removeCharacter(character: Character) {
         
-        for (index,arrayCharacter) in enumerate(characters) {
+        for (index,arrayCharacter) in characters.enumerate() {
             if character==arrayCharacter {
                 characters.removeAtIndex(index)
             }
@@ -301,19 +301,19 @@ class GameScene : CCNode,CCPhysicsCollisionDelegate {
 }
 
 // MARK:- UX Delegate
-extension GameScene: ButtonDelegate {
+extension GameScene{
     
     func retryButton() {
         cleanScene()
         
-        var gameScene: CCScene = CCBReader.loadAsScene("GameScene")
+        let gameScene: CCScene = CCBReader.loadAsScene("GameScene")
         CCDirector.sharedDirector().replaceScene(gameScene);
     }
     
     func exitButton() {
         cleanScene()
         
-        var gameScene: CCScene = CCBReader.loadAsScene("MainScene")
+        let gameScene: CCScene = CCBReader.loadAsScene("MainScene")
         CCDirector.sharedDirector().replaceScene(gameScene);
     }
     
@@ -350,11 +350,11 @@ extension CCPhysicsNode {
         case 3:
             characterName = "Character Objects/TheFrog"
         default:
-            println("No Valid Character")
+            print("No Valid Character")
             return
         }
         
-        var characterNode = CCBReader.load(characterName) as! Character
+        let characterNode = CCBReader.load(characterName) as! Character
         characterNode.position = parentNode.spawnPoint
         addChild(characterNode)
         

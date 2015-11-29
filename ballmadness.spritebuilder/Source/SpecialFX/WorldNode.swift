@@ -7,7 +7,7 @@ class WorldNode : CCEffectNode {
     }
     
     override func touchBegan(touch: CCTouch!, withEvent event: CCTouchEvent!) {
-        println("World Touched")
+        print("World Touched")
         //self.effect = nil
     }
     

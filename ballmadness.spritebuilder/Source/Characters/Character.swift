@@ -92,8 +92,6 @@ class Character : CCNode {
 
 // MARK:- Equatable
 
-extension Character: Equatable {}
-
 func ==(lhs: Character, rhs: Character) -> Bool {
     return lhs.equateStamp == rhs.equateStamp
 }
