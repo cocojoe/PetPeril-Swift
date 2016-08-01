@@ -25,7 +25,7 @@ class Button : CCSprite {
     
     // MARK: - Touch Handlers
     override func touchBegan(touch: CCTouch!, withEvent event: CCTouchEvent!) {
-       
+        
         // Ensure No Duplicates
         if ignoreTouch == true { return }
         
@@ -34,15 +34,15 @@ class Button : CCSprite {
         
         // Action to Perform
         switch action {
-            case "play":
-                delegate?.playButton?()
-            case "retry":
-                delegate?.retryButton?()
-            case "exit":
-                delegate?.exitButton?()
-            case "pause":
-                delegate?.pauseButton?()
-                ignoreTouch = false     // Non Locking Button
+        case "play":
+            delegate?.playButton?()
+        case "retry":
+            delegate?.retryButton?()
+        case "exit":
+            delegate?.exitButton?()
+        case "pause":
+            delegate?.pauseButton?()
+            ignoreTouch = false     // Non Locking Button
         default:
             print("Non Supported Action: \(action)")
             return

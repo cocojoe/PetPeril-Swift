@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5B121030197484FA004C1E1D /* ballmadnessActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B12102F197484FA004C1E1D /* ballmadnessActivity.m */; };
 		5B121038197487F2004C1E1D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B737893E1807617C0076A88C /* AppDelegate.m */; };
 		5B1A7C811B517F5B00AE10CB /* Sensor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1A7C801B517F5B00AE10CB /* Sensor.swift */; };
 		5B1A7C851B5180D200AE10CB /* Goal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1A7C841B5180D200AE10CB /* Goal.swift */; };
@@ -15,6 +14,7 @@
 		5B1A7C891B51888900AE10CB /* DeathRotor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1A7C881B51888900AE10CB /* DeathRotor.swift */; };
 		5B4901371B4CC9FC0042811C /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4901361B4CC9FC0042811C /* GameScene.swift */; };
 		5B52C3F11B5814F400584496 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B52C3F01B5814F400584496 /* Constants.swift */; };
+		5B6153651D4F940300A648F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B6153641D4F940300A648F2 /* LaunchScreen.storyboard */; };
 		5B6EF4A11B5D93DC000ACE77 /* Water.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6EF49E1B5D93DC000ACE77 /* Water.swift */; };
 		5B6EF4AE1B5E0D57000ACE77 /* water_particle.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5B6EF4AD1B5E0D57000ACE77 /* water_particle.plist */; };
 		5BA8F6D81B606DAD003A03EE /* Spawn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA8F6D71B606DAD003A03EE /* Spawn.swift */; };
@@ -22,69 +22,15 @@
 		5BAEDF591B4F795F00DC18DF /* PlatformControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAEDF581B4F795F00DC18DF /* PlatformControl.swift */; };
 		5BAEDF601B4F8F0A00DC18DF /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAEDF5F1B4F8F0A00DC18DF /* Character.swift */; };
 		5BCD271B1B4CCD870003A13C /* Platform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCD271A1B4CCD870003A13C /* Platform.swift */; };
-		5BCD271C1B4CCDAD0003A13C /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4901361B4CC9FC0042811C /* GameScene.swift */; };
 		5BCD27231B4CDE8F0003A13C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCD27221B4CDE8F0003A13C /* Extensions.swift */; };
-		5BCD27241B4CDE8F0003A13C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCD27221B4CDE8F0003A13C /* Extensions.swift */; };
 		5BD6B8481B55B8CF00C36F19 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD6B8471B55B8CF00C36F19 /* Button.swift */; };
 		5BDF71091B56DE7C0008E6C7 /* CharacterFrog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDF71081B56DE7C0008E6C7 /* CharacterFrog.swift */; };
 		5BDF710D1B56DF090008E6C7 /* CharacterCat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDF710C1B56DF090008E6C7 /* CharacterCat.swift */; };
 		5BDF710F1B56DF690008E6C7 /* CharacterPanda.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDF710E1B56DF690008E6C7 /* CharacterPanda.swift */; };
 		5BE4A2631B57747D007F9F82 /* Bounce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE4A2621B57747D007F9F82 /* Bounce.swift */; };
-		5BF3E1601B54F6ED00C4634A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BF3E1561B54F6ED00C4634A /* Default-568h@2x.png */; };
-		5BF3E1611B54F6ED00C4634A /* Default-667h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BF3E1571B54F6ED00C4634A /* Default-667h@2x.png */; };
-		5BF3E1621B54F6ED00C4634A /* Default-Landscape-736h@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BF3E1581B54F6ED00C4634A /* Default-Landscape-736h@3x.png */; };
-		5BF3E1631B54F6ED00C4634A /* Default-Landscape.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BF3E1591B54F6ED00C4634A /* Default-Landscape.png */; };
-		5BF3E1641B54F6ED00C4634A /* Default-Landscape@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BF3E15A1B54F6ED00C4634A /* Default-Landscape@2x.png */; };
-		5BF3E1651B54F6ED00C4634A /* Default-Portrait-736h@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BF3E15B1B54F6ED00C4634A /* Default-Portrait-736h@3x.png */; };
-		5BF3E1661B54F6ED00C4634A /* Default-Portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BF3E15C1B54F6ED00C4634A /* Default-Portrait.png */; };
-		5BF3E1671B54F6ED00C4634A /* Default-Portrait@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BF3E15D1B54F6ED00C4634A /* Default-Portrait@2x.png */; };
-		5BF3E1681B54F6ED00C4634A /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BF3E15E1B54F6ED00C4634A /* Default.png */; };
-		5BF3E1691B54F6ED00C4634A /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BF3E15F1B54F6ED00C4634A /* Default@2x.png */; };
 		7A046D7919E84ED5004C4763 /* MainScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A046D7519E84C36004C4763 /* MainScene.swift */; };
-		7A10CE5619F32FB0001673C3 /* MainScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A046D7519E84C36004C4763 /* MainScene.swift */; };
-		7A40360419DDEE84007B6E8F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A40360319DDEE84007B6E8F /* main.m */; };
-		7A4036EB19DE3F8E007B6E8F /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8392007918EE8E3300B6C429 /* GLKit.framework */; };
-		7A4036EC19DE3F90007B6E8F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B77F1B3117B978D7009739AE /* QuartzCore.framework */; };
-		7A4036EE19DE3F93007B6E8F /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B77F1B3517B978D7009739AE /* OpenAL.framework */; };
-		7A4036EF19DE3F95007B6E8F /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B77F1B3717B978D7009739AE /* AudioToolbox.framework */; };
-		7A4036F019DE3F97007B6E8F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B77F1B3917B978D7009739AE /* AVFoundation.framework */; };
-		7A4036F119DE3F9C007B6E8F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B77F1B3D17B978D7009739AE /* Foundation.framework */; };
-		7A4036F219DE3F9E007B6E8F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B77F1B3F17B978D7009739AE /* CoreGraphics.framework */; };
-		7A4036F319DE3FA0007B6E8F /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B77F1B4117B978D7009739AE /* CoreText.framework */; };
-		7A4036F519DE3FA8007B6E8F /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A4036F419DE3FA8007B6E8F /* AppKit.framework */; };
-		7A4036F619DE3FFC007B6E8F /* Published-iOS in Resources */ = {isa = PBXBuildFile; fileRef = B737893A180761570076A88C /* Published-iOS */; };
-		7A4036F719DE401F007B6E8F /* iPad-old.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F5907188484E7003F4D28 /* iPad-old.png */; };
-		7A4036F819DE401F007B6E8F /* iPad-old@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F5908188484E7003F4D28 /* iPad-old@2x.png */; };
-		7A4036F919DE401F007B6E8F /* iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F5909188484E7003F4D28 /* iPad.png */; };
-		7A4036FA19DE401F007B6E8F /* iPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F590A188484E7003F4D28 /* iPad@2x.png */; };
-		7A4036FB19DE401F007B6E8F /* iPhone-old.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F590B188484E7003F4D28 /* iPhone-old.png */; };
-		7A4036FC19DE401F007B6E8F /* iPhone-old@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F590C188484E7003F4D28 /* iPhone-old@2x.png */; };
-		7A4036FD19DE401F007B6E8F /* iPhone.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F590D188484E7003F4D28 /* iPhone.png */; };
-		7A4036FE19DE401F007B6E8F /* iPhone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F590E188484E7003F4D28 /* iPhone@2x.png */; };
-		7A4036FF19DE401F007B6E8F /* Settings.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F590F188484E7003F4D28 /* Settings.png */; };
-		7A40370019DE401F007B6E8F /* Settings@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F5910188484E7003F4D28 /* Settings@2x.png */; };
-		7A59493B19E37F9300F65F90 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A59493A19E37F9300F65F90 /* OpenGL.framework */; };
-		7A59493D19E37FB200F65F90 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A59493C19E37FB200F65F90 /* libz.dylib */; };
-		7A59498B19E38E4A00F65F90 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A59498A19E38E4A00F65F90 /* MainMenu.xib */; };
-		7A59498E19E3941300F65F90 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A40360619DDEE84007B6E8F /* AppDelegate.m */; };
-		7A97910819E62F84001FFC4D /* libcocos2dAndroid.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A97910019E62E40001FFC4D /* libcocos2dAndroid.a */; };
-		7A97911719E631C6001FFC4D /* libcocos2d-mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A97910419E62E40001FFC4D /* libcocos2d-mac.a */; };
 		7A97911819E631CD001FFC4D /* libcocos2d.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A9790FE19E62E40001FFC4D /* libcocos2d.a */; };
 		8392007A18EE8E3300B6C429 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8392007918EE8E3300B6C429 /* GLKit.framework */; };
-		927F61A5196C771E000F43EF /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B77F1B3517B978D7009739AE /* OpenAL.framework */; };
-		927F61A9196C771E000F43EF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B77F1B3D17B978D7009739AE /* Foundation.framework */; };
-		927F61AA196C771E000F43EF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B77F1B3F17B978D7009739AE /* CoreGraphics.framework */; };
-		927F61AB196C771E000F43EF /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B77F1B4117B978D7009739AE /* CoreText.framework */; };
-		927F61AD196C771E000F43EF /* Settings.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F590F188484E7003F4D28 /* Settings.png */; };
-		927F61AF196C771E000F43EF /* iPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F590A188484E7003F4D28 /* iPad@2x.png */; };
-		927F61B0196C771E000F43EF /* iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F5909188484E7003F4D28 /* iPad.png */; };
-		927F61B1196C771E000F43EF /* iPad-old@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F5908188484E7003F4D28 /* iPad-old@2x.png */; };
-		927F61B2196C771E000F43EF /* iPhone-old@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F590C188484E7003F4D28 /* iPhone-old@2x.png */; };
-		927F61B4196C771E000F43EF /* Settings@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F5910188484E7003F4D28 /* Settings@2x.png */; };
-		927F61B6196C771E000F43EF /* iPhone-old.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F590B188484E7003F4D28 /* iPhone-old.png */; };
-		927F61B7196C771E000F43EF /* iPhone.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F590D188484E7003F4D28 /* iPhone.png */; };
-		927F61B9196C771E000F43EF /* iPhone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F590E188484E7003F4D28 /* iPhone@2x.png */; };
-		927F61BB196C771E000F43EF /* iPad-old.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F5907188484E7003F4D28 /* iPad-old.png */; };
 		B71F5911188484E7003F4D28 /* iPad-old.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F5907188484E7003F4D28 /* iPad-old.png */; };
 		B71F5912188484E7003F4D28 /* iPad-old@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F5908188484E7003F4D28 /* iPad-old@2x.png */; };
 		B71F5913188484E7003F4D28 /* iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F5909188484E7003F4D28 /* iPad.png */; };
@@ -106,12 +52,6 @@
 		B77F1B3E17B978D7009739AE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B77F1B3D17B978D7009739AE /* Foundation.framework */; };
 		B77F1B4017B978D7009739AE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B77F1B3F17B978D7009739AE /* CoreGraphics.framework */; };
 		B77F1B4217B978D7009739AE /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B77F1B4117B978D7009739AE /* CoreText.framework */; };
-		B78A0B10198AF87200C63841 /* Published-Android in Resources */ = {isa = PBXBuildFile; fileRef = B78A0B0F198AF87200C63841 /* Published-Android */; };
-		BC5399D81A44DCC90063F482 /* AndroidKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC5399D31A44DCC90063F482 /* AndroidKit.framework */; };
-		BC5399D91A44DCC90063F482 /* CoreJava.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC5399D41A44DCC90063F482 /* CoreJava.framework */; };
-		BC5399DA1A44DCC90063F482 /* GLActivityKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC5399D51A44DCC90063F482 /* GLActivityKit.framework */; };
-		BC5399DB1A44DCC90063F482 /* JavaFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC5399D61A44DCC90063F482 /* JavaFoundation.framework */; };
-		BC5399DC1A44DCC90063F482 /* JavaKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC5399D71A44DCC90063F482 /* JavaKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -150,20 +90,6 @@
 			remoteGlobalIDString = 5018F24C0DFDEAC400C013A5;
 			remoteInfo = "cocos2d-ios";
 		};
-		7A97911519E631A1001FFC4D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B7378940180761A80076A88C /* cocos2d.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 7A4037A719E37038007B6E8F;
-			remoteInfo = "cocos2d-mac";
-		};
-		7A97912119E6321C001FFC4D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B7378940180761A80076A88C /* cocos2d.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = D2FEB60D194F6C9E00FC0574;
-			remoteInfo = cocos2dAndroid;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -182,6 +108,7 @@
 		5B1A7C881B51888900AE10CB /* DeathRotor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeathRotor.swift; sourceTree = "<group>"; };
 		5B4901361B4CC9FC0042811C /* GameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameScene.swift; path = Source/GameScene.swift; sourceTree = "<group>"; };
 		5B52C3F01B5814F400584496 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		5B6153641D4F940300A648F2 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5B6EF49E1B5D93DC000ACE77 /* Water.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Water.swift; sourceTree = "<group>"; };
 		5B6EF4AD1B5E0D57000ACE77 /* water_particle.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = water_particle.plist; path = Particles/water_particle.plist; sourceTree = "<group>"; };
 		5BA4619E1974C88900785744 /* AndroidManifest.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = AndroidManifest.xml; path = Platforms/Android/AndroidManifest.xml; sourceTree = "<group>"; };
@@ -196,18 +123,7 @@
 		5BDF710C1B56DF090008E6C7 /* CharacterCat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterCat.swift; sourceTree = "<group>"; };
 		5BDF710E1B56DF690008E6C7 /* CharacterPanda.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterPanda.swift; sourceTree = "<group>"; };
 		5BE4A2621B57747D007F9F82 /* Bounce.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bounce.swift; sourceTree = "<group>"; };
-		5BF3E1561B54F6ED00C4634A /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		5BF3E1571B54F6ED00C4634A /* Default-667h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-667h@2x.png"; sourceTree = "<group>"; };
-		5BF3E1581B54F6ED00C4634A /* Default-Landscape-736h@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape-736h@3x.png"; sourceTree = "<group>"; };
-		5BF3E1591B54F6ED00C4634A /* Default-Landscape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape.png"; sourceTree = "<group>"; };
-		5BF3E15A1B54F6ED00C4634A /* Default-Landscape@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape@2x.png"; sourceTree = "<group>"; };
-		5BF3E15B1B54F6ED00C4634A /* Default-Portrait-736h@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait-736h@3x.png"; sourceTree = "<group>"; };
-		5BF3E15C1B54F6ED00C4634A /* Default-Portrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait.png"; sourceTree = "<group>"; };
-		5BF3E15D1B54F6ED00C4634A /* Default-Portrait@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait@2x.png"; sourceTree = "<group>"; };
-		5BF3E15E1B54F6ED00C4634A /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		5BF3E15F1B54F6ED00C4634A /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		7A046D7519E84C36004C4763 /* MainScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainScene.swift; path = Source/MainScene.swift; sourceTree = "<group>"; };
-		7A4035FF19DDEE84007B6E8F /* petperil Mac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "petperil Mac.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A40360219DDEE84007B6E8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = Platforms/Mac/Info.plist; sourceTree = "<group>"; };
 		7A40360319DDEE84007B6E8F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Source/Platforms/Mac/main.m; sourceTree = "<group>"; };
 		7A40360519DDEE84007B6E8F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Source/Platforms/Mac/AppDelegate.h; sourceTree = "<group>"; };
@@ -220,7 +136,6 @@
 		7AFCD5DD19E9BDC200BCCCDA /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Bridging-Header.h"; path = "Source/Bridging-Header.h"; sourceTree = "<group>"; };
 		7BF6AF9F1A425F9800FFF9BA /* JavaFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaFoundation.framework; path = "../../../../../../../Library/SBAndroid/Application Support/Developer/Shared/Xcode/Platforms/Android.platform/Developer/SDKs/SBAndroid.sdk/System/Library/Frameworks/JavaFoundation.framework"; sourceTree = "<group>"; };
 		8392007918EE8E3300B6C429 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
-		927F61BF196C771E000F43EF /* petperil Android.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "petperil Android.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B71F5907188484E7003F4D28 /* iPad-old.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPad-old.png"; path = "Icons/iPad-old.png"; sourceTree = "<group>"; };
 		B71F5908188484E7003F4D28 /* iPad-old@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPad-old@2x.png"; path = "Icons/iPad-old@2x.png"; sourceTree = "<group>"; };
 		B71F5909188484E7003F4D28 /* iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iPad.png; path = Icons/iPad.png; sourceTree = "<group>"; };
@@ -258,42 +173,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		7A4035FC19DDEE84007B6E8F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7A97911719E631C6001FFC4D /* libcocos2d-mac.a in Frameworks */,
-				7A59493D19E37FB200F65F90 /* libz.dylib in Frameworks */,
-				7A59493B19E37F9300F65F90 /* OpenGL.framework in Frameworks */,
-				7A4036F519DE3FA8007B6E8F /* AppKit.framework in Frameworks */,
-				7A4036F319DE3FA0007B6E8F /* CoreText.framework in Frameworks */,
-				7A4036EE19DE3F93007B6E8F /* OpenAL.framework in Frameworks */,
-				7A4036EB19DE3F8E007B6E8F /* GLKit.framework in Frameworks */,
-				7A4036EF19DE3F95007B6E8F /* AudioToolbox.framework in Frameworks */,
-				7A4036F019DE3F97007B6E8F /* AVFoundation.framework in Frameworks */,
-				7A4036EC19DE3F90007B6E8F /* QuartzCore.framework in Frameworks */,
-				7A4036F119DE3F9C007B6E8F /* Foundation.framework in Frameworks */,
-				7A4036F219DE3F9E007B6E8F /* CoreGraphics.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		927F61A0196C771E000F43EF /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BC5399D81A44DCC90063F482 /* AndroidKit.framework in Frameworks */,
-				BC5399D91A44DCC90063F482 /* CoreJava.framework in Frameworks */,
-				BC5399DA1A44DCC90063F482 /* GLActivityKit.framework in Frameworks */,
-				BC5399DB1A44DCC90063F482 /* JavaFoundation.framework in Frameworks */,
-				BC5399DC1A44DCC90063F482 /* JavaKit.framework in Frameworks */,
-				7A97910819E62F84001FFC4D /* libcocos2dAndroid.a in Frameworks */,
-				927F61A5196C771E000F43EF /* OpenAL.framework in Frameworks */,
-				927F61A9196C771E000F43EF /* Foundation.framework in Frameworks */,
-				927F61AA196C771E000F43EF /* CoreGraphics.framework in Frameworks */,
-				927F61AB196C771E000F43EF /* CoreText.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		B77F1B2B17B978D7009739AE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -416,16 +295,6 @@
 		5BF3E1551B54F6ED00C4634A /* Launch Images */ = {
 			isa = PBXGroup;
 			children = (
-				5BF3E1561B54F6ED00C4634A /* Default-568h@2x.png */,
-				5BF3E1571B54F6ED00C4634A /* Default-667h@2x.png */,
-				5BF3E1581B54F6ED00C4634A /* Default-Landscape-736h@3x.png */,
-				5BF3E1591B54F6ED00C4634A /* Default-Landscape.png */,
-				5BF3E15A1B54F6ED00C4634A /* Default-Landscape@2x.png */,
-				5BF3E15B1B54F6ED00C4634A /* Default-Portrait-736h@3x.png */,
-				5BF3E15C1B54F6ED00C4634A /* Default-Portrait.png */,
-				5BF3E15D1B54F6ED00C4634A /* Default-Portrait@2x.png */,
-				5BF3E15E1B54F6ED00C4634A /* Default.png */,
-				5BF3E15F1B54F6ED00C4634A /* Default@2x.png */,
 			);
 			path = "Launch Images";
 			sourceTree = "<group>";
@@ -598,8 +467,6 @@
 			isa = PBXGroup;
 			children = (
 				B77F1B2E17B978D7009739AE /* petperil.app */,
-				927F61BF196C771E000F43EF /* petperil Android.app */,
-				7A4035FF19DDEE84007B6E8F /* petperil Mac.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -635,6 +502,7 @@
 		B77F1B4617B978D7009739AE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				5B6153641D4F940300A648F2 /* LaunchScreen.storyboard */,
 				5B6EF4AD1B5E0D57000ACE77 /* water_particle.plist */,
 				5BF3E1551B54F6ED00C4634A /* Launch Images */,
 				7A40366119DDF8C2007B6E8F /* Platforms */,
@@ -661,43 +529,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		7A4035FE19DDEE84007B6E8F /* petperil Mac */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 7A40361E19DDEE84007B6E8F /* Build configuration list for PBXNativeTarget "petperil Mac" */;
-			buildPhases = (
-				7A4035FB19DDEE84007B6E8F /* Sources */,
-				7A4035FC19DDEE84007B6E8F /* Frameworks */,
-				7A4035FD19DDEE84007B6E8F /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				7A97911619E631A1001FFC4D /* PBXTargetDependency */,
-			);
-			name = "petperil Mac";
-			productName = "ballmadness Mac";
-			productReference = 7A4035FF19DDEE84007B6E8F /* petperil Mac.app */;
-			productType = "com.apple.product-type.application";
-		};
-		927F6198196C771E000F43EF /* petperil Android */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 927F61BC196C771E000F43EF /* Build configuration list for PBXNativeTarget "petperil Android" */;
-			buildPhases = (
-				927F619B196C771E000F43EF /* Run Script */,
-				927F619C196C771E000F43EF /* Sources */,
-				927F61A0196C771E000F43EF /* Frameworks */,
-				927F61AC196C771E000F43EF /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				7A97912219E6321C001FFC4D /* PBXTargetDependency */,
-			);
-			name = "petperil Android";
-			productName = Example;
-			productReference = 927F61BF196C771E000F43EF /* petperil Android.app */;
-			productType = "com.apple.product-type.application";
-		};
 		B77F1B2D17B978D7009739AE /* petperil iOS */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = B77F1CDE17B978D8009739AE /* Build configuration list for PBXNativeTarget "petperil iOS" */;
@@ -728,11 +559,8 @@
 				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = Apportable;
 				TargetAttributes = {
-					7A4035FE19DDEE84007B6E8F = {
-						CreatedOnToolsVersion = 6.0.1;
-					};
 					B77F1B2D17B978D7009739AE = {
-						DevelopmentTeam = 2NUJ273DRF;
+						DevelopmentTeam = BDSJ8U6W85;
 						SystemCapabilities = {
 							com.apple.GameCenter = {
 								enabled = 0;
@@ -761,8 +589,6 @@
 			projectRoot = "";
 			targets = (
 				B77F1B2D17B978D7009739AE /* petperil iOS */,
-				927F6198196C771E000F43EF /* petperil Android */,
-				7A4035FE19DDEE84007B6E8F /* petperil Mac */,
 			);
 		};
 /* End PBXProject section */
@@ -799,43 +625,6 @@
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
-		7A4035FD19DDEE84007B6E8F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7A4036F719DE401F007B6E8F /* iPad-old.png in Resources */,
-				7A4036F819DE401F007B6E8F /* iPad-old@2x.png in Resources */,
-				7A4036F919DE401F007B6E8F /* iPad.png in Resources */,
-				7A4036FA19DE401F007B6E8F /* iPad@2x.png in Resources */,
-				7A4036FB19DE401F007B6E8F /* iPhone-old.png in Resources */,
-				7A4036FC19DE401F007B6E8F /* iPhone-old@2x.png in Resources */,
-				7A4036FD19DE401F007B6E8F /* iPhone.png in Resources */,
-				7A59498B19E38E4A00F65F90 /* MainMenu.xib in Resources */,
-				7A4036FE19DE401F007B6E8F /* iPhone@2x.png in Resources */,
-				7A4036FF19DE401F007B6E8F /* Settings.png in Resources */,
-				7A40370019DE401F007B6E8F /* Settings@2x.png in Resources */,
-				7A4036F619DE3FFC007B6E8F /* Published-iOS in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		927F61AC196C771E000F43EF /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				927F61AD196C771E000F43EF /* Settings.png in Resources */,
-				927F61AF196C771E000F43EF /* iPad@2x.png in Resources */,
-				927F61B0196C771E000F43EF /* iPad.png in Resources */,
-				927F61B1196C771E000F43EF /* iPad-old@2x.png in Resources */,
-				927F61B2196C771E000F43EF /* iPhone-old@2x.png in Resources */,
-				927F61B4196C771E000F43EF /* Settings@2x.png in Resources */,
-				B78A0B10198AF87200C63841 /* Published-Android in Resources */,
-				927F61B6196C771E000F43EF /* iPhone-old.png in Resources */,
-				927F61B7196C771E000F43EF /* iPhone.png in Resources */,
-				927F61B9196C771E000F43EF /* iPhone@2x.png in Resources */,
-				927F61BB196C771E000F43EF /* iPad-old.png in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		B77F1B2C17B978D7009739AE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -843,45 +632,22 @@
 				5B6EF4AE1B5E0D57000ACE77 /* water_particle.plist in Resources */,
 				B71F5919188484E7003F4D28 /* Settings.png in Resources */,
 				B71F5914188484E7003F4D28 /* iPad@2x.png in Resources */,
-				5BF3E1641B54F6ED00C4634A /* Default-Landscape@2x.png in Resources */,
-				5BF3E1611B54F6ED00C4634A /* Default-667h@2x.png in Resources */,
 				B71F5913188484E7003F4D28 /* iPad.png in Resources */,
 				B71F5912188484E7003F4D28 /* iPad-old@2x.png in Resources */,
-				5BF3E1651B54F6ED00C4634A /* Default-Portrait-736h@3x.png in Resources */,
-				5BF3E1621B54F6ED00C4634A /* Default-Landscape-736h@3x.png in Resources */,
 				B71F5916188484E7003F4D28 /* iPhone-old@2x.png in Resources */,
-				5BF3E1601B54F6ED00C4634A /* Default-568h@2x.png in Resources */,
-				5BF3E1631B54F6ED00C4634A /* Default-Landscape.png in Resources */,
 				B737893B180761570076A88C /* Published-iOS in Resources */,
-				5BF3E1691B54F6ED00C4634A /* Default@2x.png in Resources */,
-				5BF3E1661B54F6ED00C4634A /* Default-Portrait.png in Resources */,
+				5B6153651D4F940300A648F2 /* LaunchScreen.storyboard in Resources */,
 				B71F591A188484E7003F4D28 /* Settings@2x.png in Resources */,
-				5BF3E1671B54F6ED00C4634A /* Default-Portrait@2x.png in Resources */,
 				B71F5915188484E7003F4D28 /* iPhone-old.png in Resources */,
 				B71F5917188484E7003F4D28 /* iPhone.png in Resources */,
 				B71F5918188484E7003F4D28 /* iPhone@2x.png in Resources */,
 				B71F5911188484E7003F4D28 /* iPad-old.png in Resources */,
-				5BF3E1681B54F6ED00C4634A /* Default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		927F619B196C771E000F43EF /* Run Script */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Run Script";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "osascript -e 'tell application \"System Events\"' -e 'set ProcessList to name of every process' -e 'if \"SpriteBuilder\" is in ProcessList then' -e 'tell application \"SpriteBuilder\" to publish' -e 'end if' -e 'end tell'";
-		};
 		D352B47A19EC5D8A00829775 /* Compile Metal Shaders */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -899,26 +665,6 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		7A4035FB19DDEE84007B6E8F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5BCD27241B4CDE8F0003A13C /* Extensions.swift in Sources */,
-				7A10CE5619F32FB0001673C3 /* MainScene.swift in Sources */,
-				7A40360419DDEE84007B6E8F /* main.m in Sources */,
-				5BCD271C1B4CCDAD0003A13C /* GameScene.swift in Sources */,
-				7A59498E19E3941300F65F90 /* AppDelegate.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		927F619C196C771E000F43EF /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5B121030197484FA004C1E1D /* ballmadnessActivity.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		B77F1B2A17B978D7009739AE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -955,212 +701,9 @@
 			name = "cocos2d-ios";
 			targetProxy = 7A97910F19E6319A001FFC4D /* PBXContainerItemProxy */;
 		};
-		7A97911619E631A1001FFC4D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "cocos2d-mac";
-			targetProxy = 7A97911519E631A1001FFC4D /* PBXContainerItemProxy */;
-		};
-		7A97912219E6321C001FFC4D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = cocos2dAndroid;
-			targetProxy = 7A97912119E6321C001FFC4D /* PBXContainerItemProxy */;
-		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		7A40361919DDEE84007B6E8F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CODE_SIGN_IDENTITY = "-";
-				COMBINE_HIDPI_IMAGES = YES;
-				COPY_PHASE_STRIP = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_PREFIX_HEADER = Source/Prefix.pch;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				HEADER_SEARCH_PATHS = (
-					"\"Source/libs/cocos2d-iphone/cocos2d\"/**",
-					"Source/libs/cocos2d-iphone/external/Chipmunk/objectivec/include",
-					"Source/libs/cocos2d-iphone/external/Chipmunk/include",
-					"\"Source/libs/cocos2d-iphone/cocos2d-ui\"/**",
-					"\"Source/libs/cocos2d-iphone/external/ObjectAL\"/**",
-				);
-				INFOPLIST_FILE = Source/Resources/Platforms/Mac/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = (
-					"-ObjC",
-					"-lz",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = org.cocos2d.ballmadness;
-				PRODUCT_MODULE_NAME = ballmadness;
-				PRODUCT_NAME = "petperil Mac";
-				SDKROOT = macosx;
-				SWIFT_OBJC_BRIDGING_HEADER = "Source/Bridging-Header.h";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-			};
-			name = Debug;
-		};
-		7A40361A19DDEE84007B6E8F /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CODE_SIGN_IDENTITY = "-";
-				COMBINE_HIDPI_IMAGES = YES;
-				COPY_PHASE_STRIP = YES;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = Source/Prefix.pch;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				HEADER_SEARCH_PATHS = (
-					"\"Source/libs/cocos2d-iphone/cocos2d\"/**",
-					"Source/libs/cocos2d-iphone/external/Chipmunk/objectivec/include",
-					"Source/libs/cocos2d-iphone/external/Chipmunk/include",
-					"\"Source/libs/cocos2d-iphone/cocos2d-ui\"/**",
-					"\"Source/libs/cocos2d-iphone/external/ObjectAL\"/**",
-				);
-				INFOPLIST_FILE = Source/Resources/Platforms/Mac/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = (
-					"-ObjC",
-					"-lz",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = org.cocos2d.ballmadness;
-				PRODUCT_MODULE_NAME = ballmadness;
-				PRODUCT_NAME = "petperil Mac";
-				SDKROOT = macosx;
-				SWIFT_OBJC_BRIDGING_HEADER = "Source/Bridging-Header.h";
-			};
-			name = Release;
-		};
-		927F61BD196C771E000F43EF /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ANDROID_MANIFEST = "$(SRCROOT)/Source/Resources/Platforms/Android/AndroidManifest.xml";
-				ANDROID_RES_DIRS = "$(SRCROOT)/Source/Resources/res";
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COMBINE_HIDPI_IMAGES = YES;
-				COPY_PHASE_STRIP = NO;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = Source/Prefix.pch;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					DEBUG,
-					"COCOS2D_DEBUG=1",
-					"COCOS2D_ANDROID=1",
-				);
-				HEADER_SEARCH_PATHS = (
-					"\"Source/libs/cocos2d-iphone/cocos2d\"/**",
-					"Source/libs/cocos2d-iphone/external/Chipmunk/objectivec/include",
-					"Source/libs/cocos2d-iphone/external/Chipmunk/include",
-					"\"Source/libs/cocos2d-iphone/cocos2d-ui\"/**",
-					"\"Source/libs/cocos2d-iphone/external/ObjectAL\"/**",
-				);
-				INFOPLIST_FILE = Source/Resources/Platforms/Android/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SDKROOT)/usr/lib/armv7a",
-					"$(SDKROOT)/usr/local/lib/armv7a-neon",
-				);
-				ONLY_ACTIVE_ARCH = YES;
-				OTHER_LDFLAGS = (
-					"-lz",
-					"-ObjC",
-					"-lEGL",
-					"-lgles_apportable",
-					"-landroid",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = org.cocos2d.ballmadness;
-				PRODUCT_MODULE_NAME = petperil;
-				PRODUCT_NAME = "petperil Android";
-				PROVISIONING_PROFILE = "";
-				SDKROOT = sbandroid;
-				WRAPPER_EXTENSION = app;
-				opengles2 = YES;
-			};
-			name = Debug;
-		};
-		927F61BE196C771E000F43EF /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ANDROID_MANIFEST = "$(SRCROOT)/Source/Resources/Platforms/Android/AndroidManifest.xml";
-				ANDROID_RES_DIRS = "$(SRCROOT)/Source/Resources/res";
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COMBINE_HIDPI_IMAGES = YES;
-				COPY_PHASE_STRIP = YES;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = Source/Prefix.pch;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					NDEBUG,
-					"NS_BLOCK_ASSERTIONS=1",
-					"COCOS2D_ANDROID=1",
-				);
-				HEADER_SEARCH_PATHS = (
-					"\"Source/libs/cocos2d-iphone/cocos2d\"/**",
-					"Source/libs/cocos2d-iphone/external/Chipmunk/objectivec/include",
-					"Source/libs/cocos2d-iphone/external/Chipmunk/include",
-					"\"Source/libs/cocos2d-iphone/cocos2d-ui\"/**",
-					"\"Source/libs/cocos2d-iphone/external/ObjectAL\"/**",
-				);
-				INFOPLIST_FILE = Source/Resources/Platforms/Android/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SDKROOT)/usr/lib/armv7a",
-					"$(SDKROOT)/usr/local/lib/armv7a-neon",
-				);
-				OTHER_LDFLAGS = (
-					"-lz",
-					"-ObjC",
-					"-lEGL",
-					"-lgles_apportable",
-					"-landroid",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = org.cocos2d.ballmadness;
-				PRODUCT_MODULE_NAME = petperil;
-				PRODUCT_NAME = "petperil Android";
-				PROVISIONING_PROFILE = "";
-				SDKROOT = sbandroid;
-				VALIDATE_PRODUCT = YES;
-				WRAPPER_EXTENSION = app;
-				opengles2 = YES;
-			};
-			name = Release;
-		};
 		B77F1CDC17B978D8009739AE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1189,7 +732,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1221,7 +765,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1248,14 +793,14 @@
 					"\"Source/libs/cocos2d-iphone/external/ObjectAL\"/**",
 				);
 				INFOPLIST_FILE = Source/Resources/Platforms/iOS/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
 					"-lz",
 					"-ObjC",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.frostycube.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cocojoe.beta;
 				PRODUCT_NAME = petperil;
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Source/Bridging-Header.h";
@@ -1284,13 +829,13 @@
 					"\"Source/libs/cocos2d-iphone/external/ObjectAL\"/**",
 				);
 				INFOPLIST_FILE = Source/Resources/Platforms/iOS/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"-lz",
 					"-ObjC",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.frostycube.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cocojoe.beta;
 				PRODUCT_NAME = petperil;
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Source/Bridging-Header.h";
@@ -1302,24 +847,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		7A40361E19DDEE84007B6E8F /* Build configuration list for PBXNativeTarget "petperil Mac" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				7A40361919DDEE84007B6E8F /* Debug */,
-				7A40361A19DDEE84007B6E8F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		927F61BC196C771E000F43EF /* Build configuration list for PBXNativeTarget "petperil Android" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				927F61BD196C771E000F43EF /* Debug */,
-				927F61BE196C771E000F43EF /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		B77F1B2917B978D7009739AE /* Build configuration list for PBXProject "petperil" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

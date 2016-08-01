@@ -127,9 +127,7 @@ class GameScene : CCNode,CCPhysicsCollisionDelegate {
     func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, platform platformBody: CCNode!, character characterBody: CCNode!) -> Bool {
         
         let character: Character = characterBody.parent as! Character
-        var platform: PlatformControl = platformBody.parent as! PlatformControl
-        
-        character.nodesTouching++
+        character.nodesTouching+=1
         
         return true
     }
@@ -137,9 +135,8 @@ class GameScene : CCNode,CCPhysicsCollisionDelegate {
     func ccPhysicsCollisionSeparate(pair: CCPhysicsCollisionPair!, platform platformBody: CCNode!, character characterBody: CCNode!) -> Bool {
         
         let character: Character = characterBody.parent as! Character
-        var platform: PlatformControl = platformBody.parent as! PlatformControl
         
-        character.nodesTouching--
+        character.nodesTouching-=1
         
         return true
     }
@@ -188,7 +185,7 @@ class GameScene : CCNode,CCPhysicsCollisionDelegate {
         }
         
         character.isDrowning()
-    
+        
         return false
     }
     
@@ -209,13 +206,12 @@ class GameScene : CCNode,CCPhysicsCollisionDelegate {
         
         return false
     }
-
+    
     
     func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, character characterBody: CCNode!, death deathBody: CCNode!) -> Bool {
         
         // Destroy Character
         let character: Character = characterBody.parent as! Character
-        var death: Death = deathBody.parent as! Death
         
         // Add Effects
         shake()
@@ -244,7 +240,7 @@ class GameScene : CCNode,CCPhysicsCollisionDelegate {
         
         return false
     }
-
+    
     // MARK: - Effects
     
     func shake() {
@@ -344,7 +340,7 @@ extension CCPhysicsNode {
         
         switch Int.random(min: 1, max: 3) {
         case 1:
-             characterName = "Character Objects/TheCat"
+            characterName = "Character Objects/TheCat"
         case 2:
             characterName = "Character Objects/ThePanda"
         case 3:
@@ -362,6 +358,6 @@ extension CCPhysicsNode {
     }
     
     func registerSchedules() {
-        self.schedule("spawnCharacter", interval: 2.0)
+        self.schedule(#selector(CCPhysicsNode.spawnCharacter), interval: 2.0)
     }
 }

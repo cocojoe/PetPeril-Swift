@@ -1,0 +1,564 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>frames</key>
+	<dict>
+		<key>Character Assets/Cat_10.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{891, 109}, {40, 40}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {40, 40}}</string>
+			<key>sourceSize</key>
+			<string>{40, 40}</string>
+		</dict>
+		<key>Character Assets/Cat_28.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{825, 175}, {40, 40}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {40, 40}}</string>
+			<key>sourceSize</key>
+			<string>{40, 40}</string>
+		</dict>
+		<key>Character Assets/Cat_3.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{783, 106}, {40, 40}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {40, 40}}</string>
+			<key>sourceSize</key>
+			<string>{40, 40}</string>
+		</dict>
+		<key>Character Assets/Cat_4.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{783, 190}, {40, 40}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {40, 40}}</string>
+			<key>sourceSize</key>
+			<string>{40, 40}</string>
+		</dict>
+		<key>Character Assets/Cat_5.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{498, 310}, {40, 40}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {40, 40}}</string>
+			<key>sourceSize</key>
+			<string>{40, 40}</string>
+		</dict>
+		<key>Character Assets/Cat_6.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{933, 85}, {40, 40}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {40, 40}}</string>
+			<key>sourceSize</key>
+			<string>{40, 40}</string>
+		</dict>
+		<key>Character Assets/Cat_7.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{733, 238}, {40, 40}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {40, 40}}</string>
+			<key>sourceSize</key>
+			<string>{40, 40}</string>
+		</dict>
+		<key>Character Assets/Cat_8.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{582, 310}, {40, 40}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {40, 40}}</string>
+			<key>sourceSize</key>
+			<string>{40, 40}</string>
+		</dict>
+		<key>Character Assets/Cat_9.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{825, 133}, {40, 40}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {40, 40}}</string>
+			<key>sourceSize</key>
+			<string>{40, 40}</string>
+		</dict>
+		<key>Character Assets/Frog_10.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{666, 310}, {40, 40}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {40, 40}}</string>
+			<key>sourceSize</key>
+			<string>{40, 40}</string>
+		</dict>
+		<key>Character Assets/Frog_28.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{968, 1}, {40, 40}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {40, 40}}</string>
+			<key>sourceSize</key>
+			<string>{40, 40}</string>
+		</dict>
+		<key>Character Assets/Frog_3.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{867, 151}, {40, 40}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {40, 40}}</string>
+			<key>sourceSize</key>
+			<string>{40, 40}</string>
+		</dict>
+		<key>Character Assets/Frog_4.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{783, 64}, {40, 40}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {40, 40}}</string>
+			<key>sourceSize</key>
+			<string>{40, 40}</string>
+		</dict>
+		<key>Character Assets/Frog_5.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{867, 193}, {40, 40}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {40, 40}}</string>
+			<key>sourceSize</key>
+			<string>{40, 40}</string>
+		</dict>
+		<key>Character Assets/Frog_6.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{783, 148}, {40, 40}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {40, 40}}</string>
+			<key>sourceSize</key>
+			<string>{40, 40}</string>
+		</dict>
+		<key>Character Assets/Frog_7.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{624, 310}, {40, 40}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {40, 40}}</string>
+			<key>sourceSize</key>
+			<string>{40, 40}</string>
+		</dict>
+		<key>Character Assets/Frog_8.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{691, 238}, {40, 40}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {40, 40}}</string>
+			<key>sourceSize</key>
+			<string>{40, 40}</string>
+		</dict>
+		<key>Character Assets/Frog_9.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{891, 67}, {40, 40}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {40, 40}}</string>
+			<key>sourceSize</key>
+			<string>{40, 40}</string>
+		</dict>
+		<key>Character Assets/Panda_10.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{975, 127}, {40, 40}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {40, 40}}</string>
+			<key>sourceSize</key>
+			<string>{40, 40}</string>
+		</dict>
+		<key>Character Assets/Panda_28.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{708, 280}, {40, 40}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {40, 40}}</string>
+			<key>sourceSize</key>
+			<string>{40, 40}</string>
+		</dict>
+		<key>Character Assets/Panda_3.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{540, 310}, {40, 40}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {40, 40}}</string>
+			<key>sourceSize</key>
+			<string>{40, 40}</string>
+		</dict>
+		<key>Character Assets/Panda_4.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{968, 43}, {40, 40}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {40, 40}}</string>
+			<key>sourceSize</key>
+			<string>{40, 40}</string>
+		</dict>
+		<key>Character Assets/Panda_5.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{975, 85}, {40, 40}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {40, 40}}</string>
+			<key>sourceSize</key>
+			<string>{40, 40}</string>
+		</dict>
+		<key>Character Assets/Panda_6.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{933, 127}, {40, 40}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {40, 40}}</string>
+			<key>sourceSize</key>
+			<string>{40, 40}</string>
+		</dict>
+		<key>Character Assets/Panda_7.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{717, 196}, {40, 40}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {40, 40}}</string>
+			<key>sourceSize</key>
+			<string>{40, 40}</string>
+		</dict>
+		<key>Character Assets/Panda_8.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{909, 169}, {40, 40}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {40, 40}}</string>
+			<key>sourceSize</key>
+			<string>{40, 40}</string>
+		</dict>
+		<key>Character Assets/Panda_9.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{456, 310}, {40, 40}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {40, 40}}</string>
+			<key>sourceSize</key>
+			<string>{40, 40}</string>
+		</dict>
+		<key>Character Assets/button_exit.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{335, 360}, {128, 128}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {128, 128}}</string>
+			<key>sourceSize</key>
+			<string>{128, 128}</string>
+		</dict>
+		<key>Character Assets/button_pause.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{465, 352}, {128, 128}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {128, 128}}</string>
+			<key>sourceSize</key>
+			<string>{128, 128}</string>
+		</dict>
+		<key>Character Assets/button_play.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{131, 381}, {128, 128}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {128, 128}}</string>
+			<key>sourceSize</key>
+			<string>{128, 128}</string>
+		</dict>
+		<key>Character Assets/button_retry.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 381}, {128, 128}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {128, 128}}</string>
+			<key>sourceSize</key>
+			<string>{128, 128}</string>
+		</dict>
+		<key>Character Assets/decal_blood.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{261, 360}, {142, 72}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {142, 72}}</string>
+			<key>sourceSize</key>
+			<string>{142, 72}</string>
+		</dict>
+		<key>Character Assets/flag-green.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{902, 1}, {64, 64}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {64, 64}}</string>
+			<key>sourceSize</key>
+			<string>{64, 64}</string>
+		</dict>
+		<key>Character Assets/grass_platform_1.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 1}, {171, 378}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {171, 378}}</string>
+			<key>sourceSize</key>
+			<string>{171, 378}</string>
+		</dict>
+		<key>Character Assets/grass_platform_landing.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{717, 1}, {117, 61}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {117, 61}}</string>
+			<key>sourceSize</key>
+			<string>{117, 61}</string>
+		</dict>
+		<key>Character Assets/grass_platform_ramp.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{174, 1}, {280, 357}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {280, 357}}</string>
+			<key>sourceSize</key>
+			<string>{280, 357}</string>
+		</dict>
+		<key>Character Assets/grass_platform_wide.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{456, 1}, {233, 307}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {233, 307}}</string>
+			<key>sourceSize</key>
+			<string>{233, 307}</string>
+		</dict>
+		<key>Character Assets/level1-green.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{836, 1}, {64, 64}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {64, 64}}</string>
+			<key>sourceSize</key>
+			<string>{64, 64}</string>
+		</dict>
+		<key>Character Assets/level2-green.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{825, 67}, {64, 64}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {64, 64}}</string>
+			<key>sourceSize</key>
+			<string>{64, 64}</string>
+		</dict>
+		<key>Character Assets/level3-green.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{717, 64}, {64, 64}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {64, 64}}</string>
+			<key>sourceSize</key>
+			<string>{64, 64}</string>
+		</dict>
+		<key>Character Assets/rotator_death.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{595, 352}, {120, 120}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {120, 120}}</string>
+			<key>sourceSize</key>
+			<string>{120, 120}</string>
+		</dict>
+		<key>Character Assets/start-green.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{717, 130}, {64, 64}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {64, 64}}</string>
+			<key>sourceSize</key>
+			<string>{64, 64}</string>
+		</dict>
+	</dict>
+	<key>metadata</key>
+	<dict>
+		<key>format</key>
+		<integer>2</integer>
+		<key>size</key>
+		<string>{1024, 512}</string>
+		<key>textureFileName</key>
+		<string>Character Assets.png</string>
+	</dict>
+</dict>
+</plist>

@@ -40,8 +40,8 @@ class Character : CCNode {
         
         // Stop Backwards Movement (Left->Right)
         if body.physicsBody.velocity.x < 0 && acceleration.x > 0 {
-           body.physicsBody.velocity.x = acceleration.x
-           body.physicsBody.applyImpulse(acceleration)
+            body.physicsBody.velocity.x = acceleration.x
+            body.physicsBody.applyImpulse(acceleration)
         }
         
         // X Limiter (Left->Right)
@@ -62,7 +62,7 @@ class Character : CCNode {
     }
     
     func disablePhysics() {
-
+        
         // Ignore Collisions
         body.physicsBody.type = .Static
         body.physicsBody.sensor = true
