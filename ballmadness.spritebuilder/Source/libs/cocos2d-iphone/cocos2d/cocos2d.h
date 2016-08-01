@@ -57,6 +57,7 @@
 #import "CCActionInterval.h"
 #import "CCActionProgressTimer.h"
 #import "CCActionTween.h"
+#import "CCActionShake.h"
 #import "CCClippingNode.h"
 #import "CCColor.h"
 #import "CCConfiguration.h"
@@ -183,6 +184,9 @@
 #import "Support/NSThread+performBlock.h"
 #import "Support/uthash.h"
 #import "Support/utlist.h"
+
+// Effects
+#import "WaterNode.h"
 
 
 

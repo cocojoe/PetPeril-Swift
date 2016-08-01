@@ -56,6 +56,10 @@
  */
 @property (nonatomic,readwrite,strong) CCActionManager *actionManagerFixed;
 
+// HACKS!
+
+@property (nonatomic,strong) NSString* physicsGroup;
+
 
 /// Rect of the visible screen area in GL coordinates.
 @property(nonatomic, readonly) CGRect viewportRect;

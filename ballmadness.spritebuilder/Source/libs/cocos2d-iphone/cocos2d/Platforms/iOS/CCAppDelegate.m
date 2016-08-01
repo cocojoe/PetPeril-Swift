@@ -192,6 +192,7 @@ FindPOTScale(CGFloat size, CGFloat fixedSize)
 	
 	// Display FSP and SPF
 	[director setDisplayStats:[config[CCSetupShowDebugStats] boolValue]];
+    [director setDisplayStats:YES];
 	
 	// set FPS at 60
 	NSTimeInterval animationInterval = [(config[CCSetupAnimationInterval] ?: @(1.0/60.0)) doubleValue];
