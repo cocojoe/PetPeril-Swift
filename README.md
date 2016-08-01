@@ -12,7 +12,8 @@ The artwork provided is not free for commercial use.  However, it is all availab
 So please check out the following artists:
 
 Irina Savchishina - [@IrissNebula](https://twitter.com/IrissNebula)
-, [Portfolio](https://graphicriver.net/user/irissnebula/portfolio)
+, [Portfolio](https://graphicriver.net/user/irissnebula/portfolio)  
+Björn Robertsson - [iPixelpaw](https://twitter.com/iPixelpaw), [Portfolio](https://graphicriver.net/user/goblinportal)
 
 
 ##Build
