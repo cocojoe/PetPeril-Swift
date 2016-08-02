@@ -23,5 +23,5 @@ The game uses shaders so expect simulator performance to be zero, solid 60 on de
 
 ##Disclaimer
 
-I havn't cleaned the code up or ever expected anyone to ever look at the source :]  
+I havn't cleaned the code up or ever expected anyone to ever look at the source. The Cocos2D libraries are older now so expect a few warnings, nothing to get excited about.
 I designed it for iPhone 5 at the time, if it works nicely on other devices that's a bonus.
