@@ -2,7 +2,7 @@
 iOS, Swift, Objective-C, Cocos2D, Xcode 7.3.1.
 
 Fun little game concept that I couldn't find time for.  Rather than banish it to the archives of my QNAP, I thought it
-would be nice to share the source. #gamedev
+would be nice to share the source - Follow me [@martin64k](https://twitter.com/martin64k)
 
 [![Pet Peril Gameplay](https://s32.postimg.org/zbuisoikl/pet_peril.png)](https://www.youtube.com/watch?v=poy0DzMlRF4 "Pet Peril Gameplay")
 
